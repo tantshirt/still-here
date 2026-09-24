@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "variants": {
+    "standing": {
+      "vertices": 1351,
+      "triangles": 2698
+    },
+    "wheelchair": {
+      "vertices": 2047,
+      "triangles": 4006
+    }
+  },
+  "textureBytes": 12173312,
+  "decodedChecks": [
+    {
+      "variant": "standing",
+      "clip": "stand-sway",
+      "bytes": 3260416,
+      "dimensions": [
+        1024,
+        398
+      ],
+      "frames": 301,
+      "durationMs": 10000,
+      "boundsFinite": true,
+      "indicesValid": true,
+      "restGeometryMaxQuantizationMeters": 0.0004907230151754823,
+      "maxIdleDisplacementMeters": 0.0016914558667664816,
+      "loopSeamMeters": 0
+    },
+    {
+      "variant": "standing",
+      "clip": "arrive-step",
+      "bytes": 794624,
+      "dimensions": [
+        1024,
+        97
+      ],
+      "frames": 73,
+      "durationMs": 2400,
+      "boundsFinite": true,
+      "indicesValid": true,
+      "arrivalTravelMeters": 0.15997314453125,
+      "stationaryLightAndSettle": true
+    },
+    {
+      "variant": "standing",
+      "clip": "fall",
+      "bytes": 794624,
+      "dimensions": [
+        1024,
+        97
+      ],
+      "frames": 73,
+      "durationMs": 2400,
+      "boundsFinite": true,
+      "indicesValid": true,
+      "uprightFallMeters": 4,
+      "stationaryExtinguishAndDissolve": true
+    },
+    {
+      "variant": "wheelchair",
+      "clip": "stand-sway",
+      "bytes": 4931584,
+      "dimensions": [
+        1024,
+        602
+      ],
+      "frames": 301,
+      "durationMs": 10000,
+      "boundsFinite": true,
+      "indicesValid": true,
+      "restGeometryMaxQuantizationMeters": 0.0004848109074716836,
+      "maxIdleDisplacementMeters": 0.0013147375017418222,
+      "loopSeamMeters": 0
+    },
+    {
+      "variant": "wheelchair",
+      "clip": "arrive",
+      "bytes": 1196032,
+      "dimensions": [
+        1024,
+        146
+      ],
+      "frames": 73,
+      "durationMs": 2400,
+      "boundsFinite": true,
+      "indicesValid": true,
+      "arrivalTravelMeters": 0.159912109375,
+      "stationaryLightAndSettle": true
+    },
+    {
+      "variant": "wheelchair",
+      "clip": "fall",
+      "bytes": 1196032,
+      "dimensions": [
+        1024,
+        146
+      ],
+      "frames": 73,
+      "durationMs": 2400,
+      "boundsFinite": true,
+      "indicesValid": true,
+      "uprightFallMeters": 4,
+      "stationaryExtinguishAndDissolve": true
+    }
+  ],
+  "limitations": [
+    "No GPU sampling/performance check",
+    "No mobile/physical-device check",
+    "No final figure quality acceptance"
+  ]
+}

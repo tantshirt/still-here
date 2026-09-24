@@ -1,0 +1,49 @@
+{
+  "sources": [
+    {
+      "role": "base mesh",
+      "author": "pistachio",
+      "title": "Human Basemeshes",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/human-basemeshes",
+      "download": "https://opengameart.org/sites/default/files/Human%20Basemeshes.zip",
+      "archiveSha256": "b873af7825484ad2a58da186650045f55883589109a2ba9f2c440c7a7fa96fb7",
+      "localBlend": "assets-src/vat/sources/human-basemeshes.blend",
+      "trackedBlendSha256": "4cd0e968c3b4fe388489b3800dfdc9c42696050c98a13de7b2e203ec12d4ccd0",
+      "licenseEvidence": "assets-src/vat/sources/human-basemeshes-source.html"
+    },
+    {
+      "role": "stock idle and walk actions",
+      "author": "Quaternius",
+      "title": "Animated Human (2017)",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/animated-human-low-poly",
+      "download": "https://opengameart.org/sites/default/files/Animated%20Human%20by%20%40Quaternius_0.zip",
+      "archiveSha256": "dcd72162b5e59495efc629fb624d9e1deb12124b68291ad4fa3ce66b4fc24db3",
+      "localBlend": "assets-src/vat/sources/animated-human-2017.blend",
+      "trackedBlendSha256": "6ffdf7b8a269c7d214c7775c01808b2cd6e780c8fb44b8fa3a3abb03858487f7",
+      "licenseEvidence": "assets-src/vat/Quaternius-2017-LICENSE.txt"
+    }
+  ],
+  "originalWork": [
+    "Offline bake code",
+    "Mitten and foot geometry",
+    "Wheelchair geometry",
+    "Pose adaptation and root movement"
+  ],
+  "modifications": [
+    "Removed detailed fingers and toes; fixed body subdivision and triangulation",
+    "Attenuated rest-axis-retargeted stock Idle and Walk rotations",
+    "Wheelchair poses and rolling wheels baked offline",
+    "Calm fall uses neutral source pose and approved eased translation, not the unsuitable stock Death action"
+  ],
+  "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "qualityRefinement": {
+    "originalBefore": "before-refinement/",
+    "surface": "16mm voxel union, three relaxation iterations, fixed 1351-vertex body budget",
+    "weightTransfer": "barycentric nearest source triangle interpolation",
+    "seatedCorrection": "offline weighted hip/knee smoothing, no runtime pose changes",
+    "checks": "one closed body component; no nonadjacent triangle intersections in all 894 decoded frames",
+    "tradeoff": "269 additional body vertices; textures +1916928 bytes; same topology for every quality tier"
+  }
+}

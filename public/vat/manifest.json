@@ -1,0 +1,229 @@
+{
+  "schema": "still-here-vat/1",
+  "blenderVersion": "4.5.14 LTS",
+  "productionReady": true,
+  "fps": 30,
+  "coordinateSystem": "right-handed Y-up meters, forward +Z",
+  "textureFormat": "RGBA16F little-endian raw; xyz absolute positions in meters, w=1",
+  "sampling": "frame-major linear texels, index=frame*vertexCount+vertexId; nearest texel fetch; adjacent-frame interpolation",
+  "variants": {
+    "standing": {
+      "vertexCount": 1351,
+      "triangleCount": 2698,
+      "geometry": "standing.geometry.json",
+      "topologySHA256": "71123551fda4e7c41fa791115b51a727787e12304824ac1a857a7e6b85651e75",
+      "restClip": "stand-sway",
+      "restFrame": 0,
+      "clips": {
+        "stand-sway": {
+          "durationMs": 10000,
+          "frameCount": 301,
+          "loop": true,
+          "endpointIncluded": true,
+          "texture": {
+            "file": "standing.stand-sway.rgba16f",
+            "width": 1024,
+            "height": 398,
+            "bytes": 3260416,
+            "sha256": "56f6eee44e6eb618d3133fe1962074511c6ebef73093f8bf8b4918e67b7f7122"
+          },
+          "bounds": [
+            [
+              -0.36392128467559814,
+              0.0,
+              -0.12903659045696259
+            ],
+            [
+              0.36414486169815063,
+              1.8381329774856567,
+              0.21824955940246582
+            ]
+          ]
+        },
+        "arrive-step": {
+          "durationMs": 2400,
+          "frameCount": 73,
+          "loop": false,
+          "endpointIncluded": true,
+          "texture": {
+            "file": "standing.arrive-step.rgba16f",
+            "width": 1024,
+            "height": 97,
+            "bytes": 794624,
+            "sha256": "fb76dffb2ec4718cd6a8c7dd54d18e41fd993e883f1da5c27ca32b3b47752fcf"
+          },
+          "bounds": [
+            [
+              -0.41055381298065186,
+              -0.000365234911441803,
+              -0.28903600573539734
+            ],
+            [
+              0.36407142877578735,
+              1.8387680053710938,
+              0.2176598757505417
+            ]
+          ]
+        },
+        "fall": {
+          "durationMs": 2400,
+          "frameCount": 73,
+          "loop": false,
+          "endpointIncluded": true,
+          "texture": {
+            "file": "standing.fall.rgba16f",
+            "width": 1024,
+            "height": 97,
+            "bytes": 794624,
+            "sha256": "64cd9df2d310f5d78cdae3dba90f4abcf92a44863341b368c3aa32d8b257694b"
+          },
+          "bounds": [
+            [
+              -0.36384117603302,
+              -4.0,
+              -0.12903600931167603
+            ],
+            [
+              0.36407142877578735,
+              1.8381190299987793,
+              0.21744312345981598
+            ]
+          ]
+        }
+      }
+    },
+    "wheelchair": {
+      "vertexCount": 2047,
+      "triangleCount": 4006,
+      "geometry": "wheelchair.geometry.json",
+      "topologySHA256": "d07f95d6be4aec92895aafc575cead8ca1bbe1a7a1d9036b445641767f1f3692",
+      "restClip": "stand-sway",
+      "restFrame": 0,
+      "clips": {
+        "stand-sway": {
+          "durationMs": 10000,
+          "frameCount": 301,
+          "loop": true,
+          "endpointIncluded": true,
+          "texture": {
+            "file": "wheelchair.stand-sway.rgba16f",
+            "width": 1024,
+            "height": 602,
+            "bytes": 4931584,
+            "sha256": "b0f7045dc8dee81ac9f1477e70dc2cdda581fa8fe1b3fa9292af6734bda0edfd"
+          },
+          "bounds": [
+            [
+              -0.2917495667934418,
+              -0.012435853481292725,
+              -0.3869999945163727
+            ],
+            [
+              0.2918379604816437,
+              1.3819643259048462,
+              0.6420162916183472
+            ]
+          ]
+        },
+        "arrive": {
+          "durationMs": 2400,
+          "frameCount": 73,
+          "loop": false,
+          "endpointIncluded": true,
+          "texture": {
+            "file": "wheelchair.arrive.rgba16f",
+            "width": 1024,
+            "height": 146,
+            "bytes": 1196032,
+            "sha256": "dcbb669aa556c4d6c5b671481d8f184f2eed59c2ba42e16068bc373df4f5a9b0"
+          },
+          "bounds": [
+            [
+              -0.2916359305381775,
+              -0.012435853481292725,
+              -0.546999990940094
+            ],
+            [
+              0.2917323708534241,
+              1.3819502592086792,
+              0.6420162916183472
+            ]
+          ]
+        },
+        "fall": {
+          "durationMs": 2400,
+          "frameCount": 73,
+          "loop": false,
+          "endpointIncluded": true,
+          "texture": {
+            "file": "wheelchair.fall.rgba16f",
+            "width": 1024,
+            "height": 146,
+            "bytes": 1196032,
+            "sha256": "6912dfdabce8f882640e49e9742d0f35daa870b73a9f5d32b3f9859f7c6285a1"
+          },
+          "bounds": [
+            [
+              -0.2916359305381775,
+              -4.0124359130859375,
+              -0.3869999945163727
+            ],
+            [
+              0.2917323708534241,
+              1.3819502592086792,
+              0.6420162916183472
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "eventPhasesMs": {
+    "arrival": [
+      {
+        "name": "light",
+        "start": 0,
+        "end": 600
+      },
+      {
+        "name": "step",
+        "start": 600,
+        "end": 1400
+      },
+      {
+        "name": "settle",
+        "start": 1400,
+        "end": 2400
+      }
+    ],
+    "departure": [
+      {
+        "name": "extinguish",
+        "start": 0,
+        "end": 200
+      },
+      {
+        "name": "fall",
+        "start": 200,
+        "end": 1800
+      },
+      {
+        "name": "dissolve",
+        "start": 1800,
+        "end": 2400
+      }
+    ]
+  },
+  "fallEase": [
+    0.55,
+    0,
+    1,
+    0.45
+  ],
+  "notes": [
+    "Dissolve/extinguish/downlight are renderer opacity/light effects, not mesh deformation.",
+    "Motion already baked into positions; do not add root/fall translation a second time.",
+    "One topology shared by all quality tiers.",
+    "Loops use frameCount - 1; events clamp over the complete 2400ms clip; reduced motion holds each variant restFrame."
+  ]
+}

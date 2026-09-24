@@ -13,10 +13,11 @@
     "build:tokens": "node tools/build-tokens.mjs",
     "build:content": "node tools/build-stage.mjs content",
     "build:data": "node tools/build-stage.mjs data",
+    "validate:vat": "node tools/validate-vat.mjs",
     "build": "npm run lint && npm run build:tokens && npm run build:content && npm run build:data && npm run typecheck && vite build",
     "preview": "vite preview",
     "test": "vitest run && npm run test:tools",
-    "test:tools": "node --test tools/*.test.mjs",
+    "test:tools": "node --test tools/*.test.mjs && npm run validate:vat",
     "test:e2e": "npm run build && playwright test"
   },
   "dependencies": {

@@ -1,0 +1,4486 @@
+{
+  "standing": {
+    "bodyComponents": 1,
+    "bodyBoundaryEdges": 0,
+    "bodyNonManifoldEdges": 0,
+    "allFrameIntersectionChecks": [
+      {
+        "clip": "stand-sway",
+        "frame": 0,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 1,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 2,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 3,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 4,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 5,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 6,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 7,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 8,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 9,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 10,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 11,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 12,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 13,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 14,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 15,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 16,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 17,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 18,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 19,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 20,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 21,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 22,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 23,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 24,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 25,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 26,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 27,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 28,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 29,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 30,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 31,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 32,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 33,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 34,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 35,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 36,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 37,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 38,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 39,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 40,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 41,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 42,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 43,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 44,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 45,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 46,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 47,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 48,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 49,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 50,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 51,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 52,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 53,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 54,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 55,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 56,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 57,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 58,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 59,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 60,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 61,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 62,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 63,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 64,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 65,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 66,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 67,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 68,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 69,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 70,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 71,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 72,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 73,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 74,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 75,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 76,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 77,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 78,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 79,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 80,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 81,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 82,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 83,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 84,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 85,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 86,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 87,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 88,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 89,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 90,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 91,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 92,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 93,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 94,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 95,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 96,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 97,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 98,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 99,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 100,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 101,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 102,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 103,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 104,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 105,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 106,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 107,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 108,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 109,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 110,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 111,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 112,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 113,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 114,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 115,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 116,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 117,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 118,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 119,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 120,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 121,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 122,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 123,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 124,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 125,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 126,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 127,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 128,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 129,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 130,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 131,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 132,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 133,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 134,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 135,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 136,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 137,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 138,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 139,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 140,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 141,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 142,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 143,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 144,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 145,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 146,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 147,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 148,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 149,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 150,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 151,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 152,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 153,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 154,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 155,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 156,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 157,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 158,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 159,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 160,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 161,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 162,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 163,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 164,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 165,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 166,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 167,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 168,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 169,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 170,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 171,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 172,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 173,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 174,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 175,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 176,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 177,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 178,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 179,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 180,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 181,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 182,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 183,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 184,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 185,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 186,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 187,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 188,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 189,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 190,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 191,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 192,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 193,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 194,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 195,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 196,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 197,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 198,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 199,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 200,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 201,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 202,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 203,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 204,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 205,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 206,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 207,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 208,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 209,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 210,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 211,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 212,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 213,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 214,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 215,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 216,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 217,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 218,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 219,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 220,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 221,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 222,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 223,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 224,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 225,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 226,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 227,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 228,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 229,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 230,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 231,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 232,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 233,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 234,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 235,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 236,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 237,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 238,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 239,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 240,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 241,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 242,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 243,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 244,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 245,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 246,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 247,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 248,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 249,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 250,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 251,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 252,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 253,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 254,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 255,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 256,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 257,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 258,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 259,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 260,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 261,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 262,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 263,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 264,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 265,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 266,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 267,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 268,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 269,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 270,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 271,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 272,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 273,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 274,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 275,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 276,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 277,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 278,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 279,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 280,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 281,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 282,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 283,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 284,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 285,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 286,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 287,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 288,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 289,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 290,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 291,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 292,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 293,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 294,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 295,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 296,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 297,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 298,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 299,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 300,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 0,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 1,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 2,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 3,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 4,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 5,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 6,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 7,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 8,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 9,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 10,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 11,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 12,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 13,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 14,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 15,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 16,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 17,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 18,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 19,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 20,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 21,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 22,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 23,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 24,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 25,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 26,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 27,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 28,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 29,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 30,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 31,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 32,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 33,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 34,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 35,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 36,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 37,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 38,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 39,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 40,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 41,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 42,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 43,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 44,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 45,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 46,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 47,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 48,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 49,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 50,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 51,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 52,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 53,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 54,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 55,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 56,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 57,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 58,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 59,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 60,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 61,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 62,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 63,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 64,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 65,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 66,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 67,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 68,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 69,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 70,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 71,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive-step",
+        "frame": 72,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 0,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 1,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 2,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 3,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 4,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 5,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 6,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 7,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 8,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 9,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 10,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 11,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 12,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 13,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 14,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 15,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 16,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 17,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 18,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 19,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 20,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 21,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 22,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 23,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 24,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 25,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 26,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 27,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 28,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 29,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 30,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 31,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 32,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 33,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 34,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 35,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 36,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 37,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 38,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 39,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 40,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 41,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 42,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 43,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 44,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 45,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 46,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 47,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 48,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 49,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 50,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 51,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 52,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 53,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 54,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 55,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 56,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 57,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 58,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 59,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 60,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 61,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 62,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 63,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 64,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 65,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 66,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 67,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 68,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 69,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 70,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 71,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 72,
+        "nonAdjacentTriangleIntersections": 0
+      }
+    ]
+  },
+  "wheelchair": {
+    "bodyComponents": 1,
+    "bodyBoundaryEdges": 0,
+    "bodyNonManifoldEdges": 0,
+    "allFrameIntersectionChecks": [
+      {
+        "clip": "stand-sway",
+        "frame": 0,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 1,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 2,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 3,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 4,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 5,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 6,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 7,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 8,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 9,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 10,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 11,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 12,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 13,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 14,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 15,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 16,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 17,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 18,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 19,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 20,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 21,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 22,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 23,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 24,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 25,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 26,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 27,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 28,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 29,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 30,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 31,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 32,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 33,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 34,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 35,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 36,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 37,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 38,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 39,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 40,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 41,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 42,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 43,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 44,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 45,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 46,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 47,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 48,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 49,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 50,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 51,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 52,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 53,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 54,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 55,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 56,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 57,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 58,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 59,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 60,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 61,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 62,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 63,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 64,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 65,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 66,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 67,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 68,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 69,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 70,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 71,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 72,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 73,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 74,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 75,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 76,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 77,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 78,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 79,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 80,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 81,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 82,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 83,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 84,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 85,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 86,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 87,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 88,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 89,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 90,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 91,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 92,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 93,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 94,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 95,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 96,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 97,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 98,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 99,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 100,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 101,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 102,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 103,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 104,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 105,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 106,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 107,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 108,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 109,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 110,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 111,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 112,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 113,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 114,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 115,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 116,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 117,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 118,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 119,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 120,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 121,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 122,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 123,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 124,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 125,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 126,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 127,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 128,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 129,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 130,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 131,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 132,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 133,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 134,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 135,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 136,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 137,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 138,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 139,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 140,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 141,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 142,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 143,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 144,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 145,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 146,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 147,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 148,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 149,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 150,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 151,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 152,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 153,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 154,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 155,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 156,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 157,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 158,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 159,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 160,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 161,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 162,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 163,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 164,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 165,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 166,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 167,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 168,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 169,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 170,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 171,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 172,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 173,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 174,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 175,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 176,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 177,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 178,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 179,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 180,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 181,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 182,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 183,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 184,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 185,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 186,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 187,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 188,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 189,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 190,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 191,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 192,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 193,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 194,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 195,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 196,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 197,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 198,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 199,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 200,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 201,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 202,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 203,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 204,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 205,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 206,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 207,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 208,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 209,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 210,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 211,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 212,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 213,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 214,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 215,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 216,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 217,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 218,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 219,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 220,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 221,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 222,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 223,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 224,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 225,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 226,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 227,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 228,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 229,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 230,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 231,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 232,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 233,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 234,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 235,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 236,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 237,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 238,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 239,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 240,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 241,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 242,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 243,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 244,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 245,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 246,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 247,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 248,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 249,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 250,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 251,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 252,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 253,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 254,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 255,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 256,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 257,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 258,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 259,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 260,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 261,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 262,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 263,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 264,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 265,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 266,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 267,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 268,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 269,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 270,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 271,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 272,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 273,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 274,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 275,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 276,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 277,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 278,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 279,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 280,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 281,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 282,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 283,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 284,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 285,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 286,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 287,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 288,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 289,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 290,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 291,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 292,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 293,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 294,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 295,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 296,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 297,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 298,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 299,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "stand-sway",
+        "frame": 300,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 0,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 1,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 2,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 3,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 4,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 5,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 6,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 7,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 8,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 9,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 10,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 11,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 12,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 13,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 14,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 15,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 16,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 17,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 18,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 19,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 20,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 21,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 22,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 23,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 24,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 25,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 26,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 27,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 28,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 29,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 30,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 31,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 32,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 33,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 34,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 35,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 36,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 37,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 38,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 39,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 40,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 41,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 42,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 43,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 44,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 45,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 46,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 47,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 48,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 49,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 50,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 51,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 52,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 53,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 54,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 55,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 56,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 57,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 58,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 59,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 60,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 61,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 62,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 63,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 64,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 65,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 66,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 67,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 68,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 69,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 70,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 71,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "arrive",
+        "frame": 72,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 0,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 1,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 2,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 3,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 4,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 5,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 6,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 7,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 8,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 9,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 10,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 11,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 12,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 13,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 14,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 15,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 16,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 17,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 18,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 19,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 20,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 21,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 22,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 23,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 24,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 25,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 26,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 27,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 28,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 29,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 30,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 31,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 32,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 33,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 34,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 35,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 36,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 37,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 38,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 39,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 40,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 41,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 42,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 43,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 44,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 45,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 46,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 47,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 48,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 49,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 50,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 51,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 52,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 53,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 54,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 55,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 56,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 57,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 58,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 59,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 60,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 61,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 62,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 63,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 64,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 65,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 66,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 67,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 68,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 69,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 70,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 71,
+        "nonAdjacentTriangleIntersections": 0
+      },
+      {
+        "clip": "fall",
+        "frame": 72,
+        "nonAdjacentTriangleIntersections": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "variant": "standing",
+    "clip": "stand-sway",
+    "stableTopology": true,
+    "finite": true,
+    "loopSeamMaxMeters": 0.0,
+    "textureBytes": 3260416
+  },
+  {
+    "variant": "standing",
+    "clip": "arrive-step",
+    "stableTopology": true,
+    "finite": true,
+    "loopSeamMaxMeters": null,
+    "textureBytes": 794624
+  },
+  {
+    "variant": "standing",
+    "clip": "fall",
+    "stableTopology": true,
+    "finite": true,
+    "loopSeamMaxMeters": null,
+    "textureBytes": 794624
+  },
+  {
+    "variant": "wheelchair",
+    "clip": "stand-sway",
+    "stableTopology": true,
+    "finite": true,
+    "loopSeamMaxMeters": 0.0,
+    "textureBytes": 4931584
+  },
+  {
+    "variant": "wheelchair",
+    "clip": "arrive",
+    "stableTopology": true,
+    "finite": true,
+    "loopSeamMaxMeters": null,
+    "textureBytes": 1196032
+  },
+  {
+    "variant": "wheelchair",
+    "clip": "fall",
+    "stableTopology": true,
+    "finite": true,
+    "loopSeamMaxMeters": null,
+    "textureBytes": 1196032
+  }
+]
