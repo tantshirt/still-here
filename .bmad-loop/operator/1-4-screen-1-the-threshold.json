@@ -1,0 +1,12 @@
+{
+  "actions": [
+    "On a physical phone, verify loaded and failed-font threshold readability, spacing, no horizontal overflow, and native reachability of every line and enter at enlarged text sizes and short viewport heights.",
+    "With VoiceOver on macOS and iOS, navigate from initial load before visual arrival and confirm all three text groups and the native enter button occur in the intended reading order.",
+    "Verify browser-native 200% text zoom and keyboard focus on the threshold, confirming enter appears immediately on focus with its 2px outline and 3px offset.",
+    "Check the threshold in Safari and Firefox for natural reveal playback, focus and blur stability, reduced-motion changes, and native keyboard scrolling, and record any engine-specific failures."
+  ],
+  "parked_at": "2026-09-24",
+  "run_id": "20260924-113357-63a7",
+  "spec_file": "_bmad-output/implementation-artifacts/spec-1-4-screen-1-the-threshold.md",
+  "story_key": "1-4-screen-1-the-threshold"
+}

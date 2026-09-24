@@ -1,0 +1,121 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--colors-background);
+  color: var(--colors-text-primary);
+}
+
+#app {
+  --threshold-gutter: var(--spacing-gutter-mobile);
+  box-sizing: border-box;
+  height: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--threshold-gutter);
+  padding-bottom: calc(var(--threshold-gutter) + 10dvh);
+}
+
+.threshold {
+  /* Padding reserves room for the 2px outline and its 3px offset. */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--components-threshold-max-width);
+  max-height: 100%;
+  padding: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  background: var(--components-threshold-background);
+  color: var(--components-threshold-color);
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.threshold__group {
+  margin: 0;
+  letter-spacing: var(--typography-body-letter-spacing);
+  animation: threshold-arrive var(--motion-words) var(--motion-ease-out) both;
+  animation-delay: var(--motion-cut);
+}
+
+.threshold__group--2, .threshold__group--3 {
+  font-family: var(--typography-quote-font-family);
+  font-size: var(--typography-quote-font-size);
+  font-weight: var(--typography-quote-font-weight);
+  line-height: var(--typography-quote-line-height);
+  letter-spacing: var(--typography-quote-letter-spacing);
+}
+
+.threshold__group--2 {
+  margin-top: var(--components-threshold-quote-gap);
+  animation-delay: calc(var(--motion-cut) + var(--motion-words) + var(--motion-words-gap));
+}
+
+.threshold__group--3 {
+  margin-top: var(--components-threshold-paragraph-gap);
+  animation-delay: calc(var(--motion-cut) + 2 * (var(--motion-words) + var(--motion-words-gap)));
+}
+
+.text-action {
+  display: block;
+  min-width: var(--components-text-action-min-width);
+  min-height: var(--components-text-action-min-height);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--components-text-action-color);
+  font-family: var(--typography-action-font-family);
+  font-size: var(--typography-action-font-size);
+  font-weight: var(--typography-action-font-weight);
+  line-height: var(--typography-action-line-height);
+  letter-spacing: var(--typography-action-letter-spacing);
+  text-transform: var(--typography-action-text-transform);
+  cursor: pointer;
+}
+
+.text-action:hover, .text-action:focus {
+  color: var(--components-text-action-active-color);
+}
+
+.text-action:focus-visible {
+  outline: 2px solid var(--components-text-action-focus-color);
+  outline-offset: 3px;
+}
+
+.threshold__enter {
+  margin: var(--components-threshold-quote-gap) 0 0 auto;
+  animation: threshold-arrive var(--motion-ui) var(--motion-ease-out) both;
+  /* 400 + 3×600 + 2×300 + 1500 = 4300ms. */
+  animation-delay: calc(var(--motion-cut) + 3 * var(--motion-words) + 2 * var(--motion-words-gap) + var(--motion-quote-hold));
+}
+
+.threshold__enter:focus {
+  /* Override animated opacity without restarting the timeline on blur. */
+  opacity: 1 !important;
+}
+
+.threshold--revealed .threshold__group,
+.threshold--revealed .threshold__enter {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes threshold-arrive {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (min-width: 768px) {
+  #app { --threshold-gutter: var(--spacing-gutter-desktop); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .threshold__group, .threshold__enter {
+    animation: none;
+    opacity: 1;
+  }
+}

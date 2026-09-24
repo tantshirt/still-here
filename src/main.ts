@@ -1,5 +1,6 @@
 import './generated/tokens.css';
 import './ui/fonts.css';
+import './ui/threshold.css';
 import { createApp, selectApp } from './app';
 import type { AppContext, AppEvent } from './app';
 import { createAudio } from './audio';
@@ -66,7 +67,9 @@ function boot(): void {
   const app = createApp({ session, sim, audio, nowYear: new Date().getUTCFullYear() });
   app.start();
   const render = createRenderer();
-  const ui = createUi();
+  const root = document.getElementById('app');
+  if (!root) throw new Error('Missing application root');
+  const ui = createUi(root);
   const stop = startFrameLoop(
     { sim, app, audio, render, ui },
     { request: callback => requestAnimationFrame(callback), cancel: id => cancelAnimationFrame(id) },

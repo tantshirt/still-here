@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-test('production scaffold is accessible and free of browser errors', async ({ page }) => {
+test('production threshold is accessible and free of browser errors', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
@@ -11,7 +11,8 @@ test('production scaffold is accessible and free of browser errors', async ({ pa
   await expect(page.locator('html')).toHaveAttribute('data-app-ready', 'true');
   await expect(page).toHaveTitle('STILL HERE');
   await expect(page.getByRole('main')).toBeVisible();
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('STILL HERE');
+  await expect(page.getByRole('button', { name: 'enter', exact: true })).toBeAttached();
+  await expect(page.getByText('You could leave life right now.', { exact: true })).toBeAttached();
   await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
   await page.evaluate(() => document.fonts.ready);
   const fontState = await page.evaluate(() => {
