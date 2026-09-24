@@ -10,29 +10,31 @@
     "dev": "vite",
     "typecheck": "node node_modules/typescript-native/bin/tsc --noEmit",
     "lint": "eslint .",
-    "build:tokens": "node tools/build-stage.mjs tokens",
+    "build:tokens": "node tools/build-tokens.mjs",
     "build:content": "node tools/build-stage.mjs content",
     "build:data": "node tools/build-stage.mjs data",
-    "build": "npm run lint && npm run typecheck && npm run build:tokens && npm run build:content && npm run build:data && vite build",
+    "build": "npm run lint && npm run build:tokens && npm run build:content && npm run build:data && npm run typecheck && vite build",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest run && npm run test:tools",
+    "test:tools": "node --test tools/*.test.mjs",
     "test:e2e": "npm run build && playwright test"
   },
   "dependencies": {
-    "three": "0.186.0",
     "postprocessing": "6.39.5",
+    "three": "0.186.0",
     "xstate": "5.33.2"
   },
   "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.13.6",
+    "@types/three": "0.186.0",
+    "eslint": "10.11.0",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "typescript-eslint": "8.70.1",
+    "typescript-native": "npm:typescript@7.0.2",
     "vite": "8.3.0",
     "vitest": "5.0.1",
-    "@playwright/test": "1.63.0",
-    "eslint": "10.11.0",
-    "@eslint/js": "10.0.1",
-    "typescript-eslint": "8.70.1",
-    "@types/three": "0.186.0",
-    "@types/node": "24.13.6",
-    "typescript": "npm:@typescript/typescript6@6.0.2",
-    "typescript-native": "npm:typescript@7.0.2"
+    "yaml": "2.9.1"
   }
 }

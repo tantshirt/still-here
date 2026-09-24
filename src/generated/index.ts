@@ -1,2 +1,2 @@
-// Structural seam; implemented by a later story.
-export {};
+// Public generated-token interface.
+export { tokens, type Tokens } from './tokens';
