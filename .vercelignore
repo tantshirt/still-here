@@ -1,0 +1,13 @@
+_bmad/
+_bmad-output/
+.agents/
+.codex/
+.claude/
+.tastemaker/
+.design-council/
+.bmad-loop/
+art/
+test-results/
+playwright-report/
+AGENTS.md
+dist/
