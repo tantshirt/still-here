@@ -1,3 +1,5 @@
+import './generated/tokens.css';
+import './ui/fonts.css';
 import { createApp, selectApp } from './app';
 import type { AppContext, AppEvent } from './app';
 import { createAudio } from './audio';

@@ -12,7 +12,7 @@ export const tokens = {
   },
   "typography": {
     "action": {
-      "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       "fontSize": "12px",
       "fontWeight": "400",
       "letterSpacing": "0.04em",
@@ -20,14 +20,14 @@ export const tokens = {
       "textTransform": "lowercase"
     },
     "body": {
-      "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       "fontSize": "16px",
       "fontWeight": "400",
       "letterSpacing": "0",
       "lineHeight": "24px"
     },
     "metadata": {
-      "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       "fontSize": "12px",
       "fontWeight": "500",
       "letterSpacing": "0.16em",
@@ -35,14 +35,14 @@ export const tokens = {
       "textTransform": "uppercase"
     },
     "quote": {
-      "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       "fontSize": "22px",
       "fontWeight": "400",
       "letterSpacing": "-0.01em",
       "lineHeight": "30px"
     },
     "reflection": {
-      "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       "fontSize": "18px",
       "fontWeight": "400",
       "letterSpacing": "0",
@@ -126,7 +126,7 @@ export const tokens = {
       "minHeight": "44px",
       "minWidth": "44px",
       "typography": {
-        "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
         "fontSize": "12px",
         "fontWeight": "400",
         "letterSpacing": "0.04em",
@@ -142,7 +142,7 @@ export const tokens = {
       "color": "#F2F2F2",
       "maxWidth": "320px",
       "typography": {
-        "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
         "fontSize": "16px",
         "fontWeight": "400",
         "letterSpacing": "0",
@@ -159,7 +159,7 @@ export const tokens = {
     "scene-caption": {
       "color": "#A8A8A8",
       "typography": {
-        "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
         "fontSize": "12px",
         "fontWeight": "500",
         "letterSpacing": "0.16em",
@@ -185,7 +185,7 @@ export const tokens = {
       "minHeight": "44px",
       "minWidth": "44px",
       "typography": {
-        "fontFamily": "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "fontFamily": "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
         "fontSize": "12px",
         "fontWeight": "400",
         "letterSpacing": "0.04em",

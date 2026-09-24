@@ -25,32 +25,32 @@ colors:
   scene-light: '#FFFFFF'
 typography:
   body:
-    fontFamily: "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: 16px
     fontWeight: '400'
     lineHeight: 24px
     letterSpacing: '0'
   reflection:
-    fontFamily: "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: 18px
     fontWeight: '400'
     lineHeight: 27px
     letterSpacing: '0'
   quote:
-    fontFamily: "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: 22px
     fontWeight: '400'
     lineHeight: 30px
     letterSpacing: '-0.01em'
   metadata:
-    fontFamily: "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: 12px
     fontWeight: '500'
     lineHeight: 18px
     letterSpacing: '0.16em'
     textTransform: uppercase
   action:
-    fontFamily: "'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "'Geist', 'Geist Fallback', Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: 12px
     fontWeight: '400'
     lineHeight: 18px
@@ -221,7 +221,7 @@ Normal text must reach 4.5:1 against its actual backing; large text and meaningf
 
 ## Typography
 
-One cold grotesk: open licence, self-hosted, two weights (400 and 500), at most 60KB total. **Geist is the candidate. The Screen 1 browser type test (Geist against one alternate) still has to run before the face is locked.** Inter is banned. Serif and monospace faces are banned because they split the piece into two voices. Until the test, the token stack falls back to system sans.
+One cold grotesk: open licence, self-hosted, two weights (400 and 500), at most 60KB total. **Geist is locked by the delegated browser comparison on 2026-09-24 (Story 1.3), against IBM Plex Sans.** The two static Latin subsets total 55,196 bytes. Inter is banned. Serif and monospace faces are banned because they split the piece into two voices. The stack uses metric-adjusted local Arial for immediate fallback, then ordinary system sans where Arial is unavailable. See the Story 1.3 evidence and delegated decision; no direct owner visual approval is claimed.
 
 - Screen 1 prose uses `{typography.body}`. The Marcus lines use `{typography.quote}`: they are set apart by size only, never by a second face, italics or quotation marks.
 - The caption uses `{typography.metadata}`: capitals with wide tracking.

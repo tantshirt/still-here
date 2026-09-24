@@ -1,0 +1,10 @@
+{
+  "actions": [
+    "Review the exact-copy type study on a physical phone at the approved sizes and record legibility and wrapping evidence.",
+    "Test delayed and failed font delivery on a physical phone without local Arial and record whether fallback text remains readable without visible layout movement."
+  ],
+  "parked_at": "2026-09-24",
+  "run_id": "20260924-113357-63a7",
+  "spec_file": "_bmad-output/implementation-artifacts/spec-1-3-typeface-spike-choose-and-ship-the-grotesk.md",
+  "story_key": "1-3-typeface-spike-choose-and-ship-the-grotesk"
+}

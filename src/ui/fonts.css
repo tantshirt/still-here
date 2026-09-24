@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/geist-400-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/geist-500-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+/* Threshold-corpus width match to Arial; see docs/font-provenance.md. */
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial');
+  font-style: normal;
+  font-weight: 400 500;
+  size-adjust: 101.455%;
+  ascent-override: 99.059%;
+  descent-override: 29.077%;
+  line-gap-override: 0%;
+}
+body {
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-body-font-weight);
+  line-height: var(--typography-body-line-height);
+}
