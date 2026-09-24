@@ -7,3 +7,8 @@ export const thresholdCopy = {
   ],
   enter: 'enter',
 } as const;
+
+export const sceneCopy = {
+  label: 'World, Now',
+  description: 'Modeled estimates and imagined lives.',
+} as const;

@@ -1,0 +1,10 @@
+{
+  "actions": [
+    "On a physical touch device, reload and tap enter before and after its reveal; verify immediate removal, the black cut, silent continuation, no restart on repeated taps, and browser audio-policy unlock from the real touch gesture.",
+    "With macOS and iOS VoiceOver, activate enter and verify focus reaches the scene and announces World, Now plus modeled estimates and imagined lives; verify threshold returns only after reload."
+  ],
+  "parked_at": "2026-09-24",
+  "run_id": "20260924-113357-63a7",
+  "spec_file": "_bmad-output/implementation-artifacts/spec-1-5-enter-and-the-cut.md",
+  "story_key": "1-5-enter-and-the-cut"
+}

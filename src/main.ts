@@ -5,6 +5,7 @@ import { createApp, selectApp } from './app';
 import type { AppContext, AppEvent } from './app';
 import { createAudio } from './audio';
 import type { AudioPort } from './audio';
+import { createInput } from './input';
 import { createRenderer } from './render';
 import type { FrameOutput, RenderPort } from './render';
 import { createSession, createSimulation } from './sim';
@@ -70,6 +71,13 @@ function boot(): void {
   const root = document.getElementById('app');
   if (!root) throw new Error('Missing application root');
   const ui = createUi(root);
+  // Settle presentation on the gesture stack, independent of the next frame.
+  const subscription = app.subscribe(({ context }) => {
+    const { session: _session, ...state } = context;
+    void _session;
+    ui.present(state);
+  });
+  const input = createInput(root, event => app.send(event));
   const stop = startFrameLoop(
     { sim, app, audio, render, ui },
     { request: callback => requestAnimationFrame(callback), cancel: id => cancelAnimationFrame(id) },
@@ -77,6 +85,8 @@ function boot(): void {
   );
   import.meta.hot?.dispose(() => {
     stop();
+    input.dispose();
+    subscription.unsubscribe();
     app.stop();
     render.dispose();
     audio.dispose();

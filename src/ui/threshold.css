@@ -98,6 +98,8 @@ html, body {
   opacity: 1 !important;
 }
 
+html[data-reduced-motion="true"] .threshold__group,
+html[data-reduced-motion="true"] .threshold__enter,
 .threshold--revealed .threshold__group,
 .threshold--revealed .threshold__enter {
   animation: none;
@@ -113,9 +115,9 @@ html, body {
   #app { --threshold-gutter: var(--spacing-gutter-desktop); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .threshold__group, .threshold__enter {
-    animation: none;
-    opacity: 1;
-  }
+.scene-surface {
+  position: fixed;
+  inset: 0;
+  background: var(--colors-background);
+  outline: none;
 }

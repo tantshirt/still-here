@@ -5,6 +5,7 @@ export type Camera = 'under' | 'level' | 'above';
 export type FallbackReason = 'noWebGL' | 'lowPerf' | 'contextLost' | 'initTimeout' | 'noWorldData';
 export type Reflection = { readonly kind: 'none' } | { readonly kind: 'teaser' | 'expanded'; readonly id: string };
 export interface AppContext {
+  readonly phase: 'opening' | 'cut' | 'preparing';
   readonly session: SessionSeed;
   readonly selection: Selection;
   readonly pending: Selection | null;
