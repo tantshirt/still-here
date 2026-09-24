@@ -55,7 +55,7 @@ export async function build(source,registry,out) {
 }
 export async function buildProduction({
  source='content/reflections.json',
- registry='content/sources.json',
+ registry='content/sources.registry.json',
  publicDir='public/content',
  generated='src/generated/reflections.ts',
 }={}) {
