@@ -26,10 +26,11 @@ export interface FramePorts {
 
 /** One frame transaction: emitted app events settle before any view reads state. */
 export function runFrame(ports: FramePorts, dt: number, previous: FrameOutput): FrameOutput {
-  const { snapshot, events } = ports.sim.step(dt, { fps: previous.fps });
-  for (const event of events) ports.app.send(event);
   const state = ports.app.getSnapshot().context;
-  const output = ports.render.draw(snapshot, selectApp(state), dt);
+  const selectors = selectApp(state);
+  const { snapshot, events } = ports.sim.step(dt, { fps: previous.fps, active: selectors.sceneActive });
+  for (const event of events) ports.app.send(event);
+  const output = ports.render.draw(snapshot, selectors, dt);
   ports.audio.update(snapshot.started);
   const { session, ...uiState } = state;
   void session;
@@ -106,6 +107,7 @@ function boot(): void {
         { birthsPerSecond: entry.births / seconds, deathsPerSecond: entry.deaths / seconds },
         entry.population,
         constants.Pmax,
+        constants.rmax,
       );
       while (app.getSnapshot().context.phase === 'opening') {
         await new Promise<void>(resolve => requestAnimationFrame(() => resolve()));

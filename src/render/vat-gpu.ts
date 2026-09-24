@@ -140,12 +140,13 @@ export function createFigureMaterial({ manifest, variantName, clips, color }) {
           float frame = mod((loopSeconds + actorPhase) * fps, float(idleLastFrame));
           p = vatSample(idleMap, frame, id, vertexCount, idleLastFrame);
         } else {
-          float frame = clamp(eventSeconds * fps, 0.0, float(eventLastFrame));
+          float evt = actorClip < 0.5 ? eventSeconds : actorPhase;
+          float frame = clamp(evt * fps, 0.0, float(eventLastFrame));
           if (actorClip < 1.5) {
             p = vatSample(arriveMap, frame, id, vertexCount, eventLastFrame);
           } else {
             p = vatSample(fallMap, frame, id, vertexCount, eventLastFrame);
-            vOpacity = 1.0 - smoothstep(dissolveStart, dissolveEnd, eventSeconds);
+            vOpacity = 1.0 - smoothstep(dissolveStart, dissolveEnd, evt);
           }
         }
         gl_Position = projectionMatrix * modelViewMatrix * instanceMatrix * vec4(p, 1.0);

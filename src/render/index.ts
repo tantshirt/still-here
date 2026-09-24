@@ -59,6 +59,7 @@ export function createRenderer(options: RenderOptions): RenderPort {
   let haze: HazePass | undefined;
   let bloom: BloomEffect | undefined;
   let idleClip: { durationMs: number; frameCount: number; loop: boolean } | undefined;
+  let downlights: THREE.InstancedMesh | undefined;
   let tier: QualityTier = 'high';
   let prepared = false;
   let lastWidth = 0;
@@ -161,6 +162,16 @@ export function createRenderer(options: RenderOptions): RenderPort {
       scene.add(mesh);
     }
     idleClip = (manifest.variants as LoadedVat['variants']).standing.clips['stand-sway'] as { durationMs: number; frameCount: number; loop: boolean };
+    const disc = new THREE.CircleGeometry(0.55, 24);
+    disc.rotateX(-Math.PI / 2);
+    downlights = new THREE.InstancedMesh(
+      disc,
+      new THREE.MeshBasicMaterial({ color: tone(4.5, light), transparent: true, opacity: 1, depthWrite: false }),
+      128,
+    );
+    downlights.frustumCulled = false;
+    downlights.count = 0;
+    scene.add(downlights);
     const clipAttrStanding = new Float32Array(GPU_CAP);
     const phaseAttrStanding = new Float32Array(GPU_CAP);
     standingGeometry.setAttribute('actorClip', new THREE.InstancedBufferAttribute(clipAttrStanding, 1));
@@ -228,13 +239,15 @@ export function createRenderer(options: RenderOptions): RenderPort {
     if (!crowd || !bounds) return;
     const unitShort = 1 / Number(tokens.render['figure-height-ratio']);
     const scale = bounds.shortEdge / unitShort;
-    const standingCount = snapshot.standing.slots.filter(slot => !slot.wheelchair).length;
-    const wheelchairCount = snapshot.standing.slots.filter(slot => slot.wheelchair).length;
-    crowd.standing.count = standingCount;
-    crowd.wheelchair.count = wheelchairCount;
+    const activeStanding = new Set(snapshot.actors.map(actor => actor.standingIndex));
     let si = 0;
     let wi = 0;
+    const clipAttrStanding = crowd.standing.geometry.getAttribute('actorClip') as THREE.InstancedBufferAttribute;
+    const phaseAttrStanding = crowd.standing.geometry.getAttribute('actorPhase') as THREE.InstancedBufferAttribute;
+    const clipAttrWheel = crowd.wheelchair.geometry.getAttribute('actorClip') as THREE.InstancedBufferAttribute;
+    const phaseAttrWheel = crowd.wheelchair.geometry.getAttribute('actorPhase') as THREE.InstancedBufferAttribute;
     for (const slot of snapshot.standing.slots) {
+      if (!slot.occupied || activeStanding.has(slot.index)) continue;
       const mesh = slot.wheelchair ? crowd.wheelchair : crowd.standing;
       const index = slot.wheelchair ? wi++ : si++;
       const y = slot.tier ? 0.08 * scale : 0;
@@ -242,11 +255,42 @@ export function createRenderer(options: RenderOptions): RenderPort {
       dummy.rotation.set(0, (slot.seed / 0xffffffff - 0.5) * 0.7, 0);
       dummy.updateMatrix();
       mesh.setMatrixAt(index, dummy.matrix);
-      const phaseAttr = mesh.geometry.getAttribute('actorPhase') as THREE.InstancedBufferAttribute | undefined;
-      if (phaseAttr) phaseAttr.setX(index, slot.swayPhase);
+      const clipAttr = slot.wheelchair ? clipAttrWheel : clipAttrStanding;
+      const phaseAttr = slot.wheelchair ? phaseAttrWheel : phaseAttrStanding;
+      clipAttr.setX(index, 0);
+      phaseAttr.setX(index, slot.swayPhase);
     }
+    const eventBaseStanding = si;
+    const eventBaseWheel = wi;
+    for (const actor of snapshot.actors) {
+      const slot = snapshot.standing.slots[actor.standingIndex];
+      if (!slot) continue;
+      const mesh = slot.wheelchair ? crowd.wheelchair : crowd.standing;
+      const index = (slot.wheelchair ? eventBaseWheel : eventBaseStanding) + actor.actorSlot;
+      const y = slot.tier ? 0.08 * scale : 0;
+      dummy.position.set(slot.x * scale, y, slot.z * scale);
+      dummy.rotation.set(0, (slot.seed / 0xffffffff - 0.5) * 0.7, 0);
+      dummy.updateMatrix();
+      mesh.setMatrixAt(index, dummy.matrix);
+      const clipAttr = slot.wheelchair ? clipAttrWheel : clipAttrStanding;
+      const phaseAttr = slot.wheelchair ? phaseAttrWheel : phaseAttrStanding;
+      clipAttr.setX(index, actor.kind === 'birth' ? 1 : 2);
+      phaseAttr.setX(index, Math.max(0, snapshot.sceneT - actor.tStart));
+    }
+    const standingEventSlots = snapshot.actors
+      .filter(actor => !snapshot.standing.slots[actor.standingIndex]?.wheelchair)
+      .map(actor => actor.actorSlot + 1);
+    const wheelchairEventSlots = snapshot.actors
+      .filter(actor => snapshot.standing.slots[actor.standingIndex]?.wheelchair)
+      .map(actor => actor.actorSlot + 1);
+    crowd.standing.count = Math.max(si, eventBaseStanding + (standingEventSlots.length ? Math.max(...standingEventSlots) : 0));
+    crowd.wheelchair.count = Math.max(wi, eventBaseWheel + (wheelchairEventSlots.length ? Math.max(...wheelchairEventSlots) : 0));
     crowd.standing.instanceMatrix.needsUpdate = true;
     crowd.wheelchair.instanceMatrix.needsUpdate = true;
+    clipAttrStanding.needsUpdate = true;
+    phaseAttrStanding.needsUpdate = true;
+    clipAttrWheel.needsUpdate = true;
+    phaseAttrWheel.needsUpdate = true;
     const loopSeconds = idleClip ? wrapLoopSeconds(snapshot.sceneT, idleClip) : 0;
     for (const mesh of [crowd.standing, crowd.wheelchair]) {
       const uniforms = (mesh.material as THREE.ShaderMaterial).uniforms;
@@ -254,7 +298,29 @@ export function createRenderer(options: RenderOptions): RenderPort {
       if (uniforms.eventSeconds) uniforms.eventSeconds.value = 0;
       if (uniforms.reducedMotion) uniforms.reducedMotion.value = selectors.reducedMotion;
     }
-    void selectors;
+    if (downlights) {
+      const lightSeconds = tokens.motion['birth-light'] / 1000;
+      let di = 0;
+      const material = downlights.material as THREE.MeshBasicMaterial;
+      for (const actor of snapshot.actors) {
+        if (actor.kind !== 'birth') continue;
+        const elapsed = snapshot.sceneT - actor.tStart;
+        if (elapsed > lightSeconds) continue;
+        const slot = snapshot.standing.slots[actor.standingIndex];
+        if (!slot) continue;
+        const fade = 1 - elapsed / lightSeconds;
+        dummy.position.set(slot.x * scale, 0.02, slot.z * scale);
+        dummy.scale.setScalar(0.9 + fade * 0.35);
+        dummy.rotation.set(-Math.PI / 2, 0, 0);
+        dummy.updateMatrix();
+        downlights.setMatrixAt(di, dummy.matrix);
+        dummy.scale.set(1, 1, 1);
+        di += 1;
+      }
+      downlights.count = di;
+      material.opacity = selectors.reducedMotion ? 0.35 : 1;
+      downlights.instanceMatrix.needsUpdate = true;
+    }
   }
 
   function updateSlabMotion(snapshot: SimSnapshot, selectors: AppSelectors): void {

@@ -29,7 +29,7 @@ export type SimAppEvent =
   | { readonly type: 'REFLECTION_READY'; readonly reflectionId: string }
   | { readonly type: 'FIRST_FALL_SEEN' }
   | { readonly type: 'KEY_CHANGE_FINISHED' };
-export interface FrameStats { readonly fps: number }
+export interface FrameStats { readonly fps: number; readonly active?: boolean }
 export interface SimStep { readonly snapshot: SimSnapshot; readonly events: readonly SimAppEvent[] }
 export interface SelectionRates { readonly birthsPerSecond: number; readonly deathsPerSecond: number }
 export type Show = 'both' | 'arrivals' | 'departures';
@@ -38,7 +38,8 @@ export type ReflectionReleaseReason = 'dismissed' | 'selection' | 'overlay';
 /** Synchronous commands only. Simulation owns scene truth; views never call this port. */
 export interface SimPort {
   step(dt: number, frameStats: FrameStats): SimStep;
-  applySelection(rates: SelectionRates, population: number, pmax: number): void;
+  applySelection(rates: SelectionRates, population: number, pmax: number, rmax: number): void;
+  retry(): void;
   setPresentation(presentation: Presentation): void;
   setShow(show: Show): void;
   setSpeed(speed: 0.25 | 1 | 4): void;
