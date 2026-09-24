@@ -1,0 +1,11 @@
+# working tooling and process files stay local
+.design-council/
+.claude/
+.agents/
+_bmad/
+_bmad-output/
+.tastemaker/
+
+.DS_Store
+.env*
+node_modules/
