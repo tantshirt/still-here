@@ -12,5 +12,11 @@ _bmad-output/
 node_modules/
 .bmad-loop/runs/
 .bmad-loop/cache/
+.bmad-loop/tools/
 .bmad-loop/policy.toml
 _bmad/render/
+.vercel
+
+dist/
+playwright-report/
+test-results/
