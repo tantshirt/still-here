@@ -5,6 +5,7 @@
   "installCommand": "npm ci",
   "outputDirectory": "dist",
   "routes": [
+    { "src": "/data/data-manifest.json", "headers": { "Cache-Control": "no-cache" }, "continue": true },
     {
       "src": "/(.*)",
       "headers": {
@@ -16,6 +17,7 @@
       },
       "continue": true
     },
+    { "src": "/data/(.*)\\.[a-f0-9]{16}\\.json", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
     {
       "src": "/assets/(.*)-([A-Za-z0-9_-]{8,})\\.(.*)",
       "headers": {

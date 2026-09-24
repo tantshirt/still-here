@@ -94,4 +94,14 @@ test('hosted HTML, assets, fonts and missing routes deliver the privacy envelope
     if (!missing.includes(path) && path.startsWith('/assets/')) expect(path).toMatch(/-[A-Za-z0-9_-]{8,}\.[^/]+$/);
     expect(headers['cache-control']).toContain(!missing.includes(path) && (path.startsWith('/assets/') || path.startsWith('/fonts/')) ? 'immutable' : 'no-cache');
   }
+
+  const manifestResponse = await request.get('/data/data-manifest.json');
+  expect(manifestResponse.status()).toBe(200);
+  expect(manifestResponse.headers()['cache-control']).toContain('no-cache');
+  const manifest = await manifestResponse.json() as { files: Record<string, string> };
+  const worldPath = manifest.files['world.json'];
+  expect(worldPath).toMatch(/^world\.[a-f0-9]{16}\.json$/);
+  const worldResponse = await request.get(`/data/${worldPath}`);
+  expect(worldResponse.status()).toBe(200);
+  expect(worldResponse.headers()['cache-control']).toBe('public, max-age=31536000, immutable');
 });
