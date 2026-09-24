@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Independent decoder validation for the cached prototype (Python stdlib only)."""
+"""Independent decoder validation of the tracked VAT outputs (Python 3 stdlib only).
+Run: python3 assets-src/vat/validate.py  -> assets-src/vat/validation-independent.json"""
 import json,struct,hashlib,math
 from pathlib import Path
-root=Path(__file__).resolve().parent;m=json.loads((root/'manifest.json').read_text());reports=[]
+here=Path(__file__).resolve().parent;root=here.parents[1]/'public/vat';m=json.loads((root/'manifest.json').read_text());reports=[]
 for variant,v in m['variants'].items():
- g=json.loads((root/v['geometry']).read_text());n=v['vertexCount'];inds=g['indices'];assert len(g['positions'])==n*3;assert len(inds)==v['triangleCount']*3;assert all(0<=i<n for i in inds)
+ gb=(root/v['geometry']['file']).read_bytes();assert len(gb)==v['geometry']['bytes'] and hashlib.sha256(gb).hexdigest()==v['geometry']['sha256'];g=json.loads(gb);n=v['vertexCount'];inds=g['indices'];assert len(g['positions'])==n*3;assert len(inds)==v['triangleCount']*3;assert all(0<=i<n for i in inds)
  tri=[inds[i:i+3] for i in range(0,len(inds),3)];assert hashlib.sha256(json.dumps(tri,separators=(',',':')).encode()).hexdigest()==v['topologySHA256']
  for clip,c in v['clips'].items():
   tex=c['texture'];data=(root/tex['file']).read_bytes();assert len(data)==tex['width']*tex['height']*8==tex['bytes'];assert hashlib.sha256(data).hexdigest()==tex['sha256'];assert c['frameCount']==round(c['durationMs']/1000*m['fps'])+1
@@ -25,5 +26,5 @@ for variant,v in m['variants'].items():
    r['arrivalTravelMeters']=last[0][2]-first[0][2];assert abs(r['arrivalTravelMeters']-.16)<.002
    r['stationaryLightAndSettle']=True
   reports.append(r)
-summary={'status':'passed','variants':{k:{'vertices':v['vertexCount'],'triangles':v['triangleCount']} for k,v in m['variants'].items()},'textureBytes':sum(x['bytes'] for x in reports),'decodedChecks':reports,'limitations':['No GPU sampling/performance check','No mobile/physical-device check','No final figure quality acceptance']}
-(root/'validation-independent.json').write_text(json.dumps(summary,indent=2));print(json.dumps(summary,indent=2))
+summary={'status':'passed','variants':{k:{'vertices':v['vertexCount'],'triangles':v['triangleCount']} for k,v in m['variants'].items()},'textureBytes':sum(x['bytes'] for x in reports),'decodedChecks':reports,'limitations':['CPU decode only; GPU sampling is verified by the browser render spike','No physical-device performance check']}
+(here/'validation-independent.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary,indent=2))

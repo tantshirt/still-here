@@ -1,7 +1,9 @@
-html, body { margin: 0; background: #080808; color: #eee; font: 12px ui-monospace, monospace; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #000; color: #ddd; font: 12px/1.4 ui-monospace, monospace; }
 canvas { display: block; width: 100vw; height: 100vh; }
-header { position: fixed; z-index: 2; inset: 14px auto auto 18px; max-width: 900px; }
-h1 { margin: 0 0 8px; font: 14px ui-monospace, monospace; }
-button { border: 1px solid #666; background: #171717; color: #eee; padding: 6px 8px; }
-pre { position: fixed; bottom: 8px; left: 18px; background: #000c; padding: 8px; white-space: pre-wrap; }
-#error { color: #f88; }
+header { position: fixed; z-index: 2; top: 12px; left: 16px; right: 16px; }
+h1 { margin: 0 0 4px; font-size: 13px; font-weight: 500; }
+p { margin: 2px 0; }
+button { margin: 4px 4px 0 0; border: 1px solid #555; background: #111; color: #ddd; padding: 5px 8px; font: inherit; }
+pre { position: fixed; bottom: 8px; left: 16px; max-height: 40vh; overflow: auto; margin: 0; background: #000c; white-space: pre-wrap; }
+#error { color: #ddd; font-weight: 700; }
+body.clean header, body.clean pre { display: none; }

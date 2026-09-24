@@ -1,3 +1,27 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>STILL HERE — render spike</title><link rel="stylesheet" href="./spike.css"></head>
-<body><header><h1>STILL HERE / tracked render spike</h1><p>1600 fixed figures · two VAT draws · matched cameras · diagnostic timing only</p><nav><button data-camera="level">Level</button> <button data-camera="under">Under</button> <button data-camera="close">Figure</button> <button data-pose="rest">Rest</button> <button data-pose="step">Arrive</button> <button data-pose="fall">Fall</button> <button data-tier="high">High</button> <button data-tier="medium">Medium</button> <button data-tier="low">Low</button> <button id="play">Play</button> <button id="gpu-check">GPU check</button></nav><p id="state">Loading…</p><p id="error" role="alert"></p></header><pre id="stats"></pre><script type="module" src="./main.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>STILL HERE — render spike</title>
+<link rel="stylesheet" href="./spike.css">
+</head>
+<body>
+<header>
+<h1>STILL HERE · render spike (diagnostic)</h1>
+<p>1600 figures · two VAT draws · throwaway inspection slab · not the production renderer</p>
+<nav aria-label="Spike controls">
+<button type="button" data-camera="under">Under</button><button type="button" data-camera="level">Level</button><button type="button" data-camera="above">Above</button><button type="button" data-camera="figure">Figure</button>
+<button type="button" data-pose="rest">Rest</button><button type="button" data-pose="step">Step</button><button type="button" data-pose="fall">Fall</button>
+<button type="button" data-tier="high">High</button><button type="button" data-tier="medium">Medium</button><button type="button" data-tier="low">Low</button>
+<button type="button" id="play">Play/pause</button><button type="button" id="reduced">Reduced motion</button><button type="button" id="measure">Measure 6s</button><button type="button" id="gpu-check">GPU check</button>
+</nav>
+<p id="state">Loading…</p>
+<p id="identity"></p>
+<p id="error" role="alert"></p>
+</header>
+<pre id="stats"></pre>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

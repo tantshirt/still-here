@@ -1,16 +1,53 @@
 {
   "schema": "still-here-vat/1",
-  "blenderVersion": "4.5.14 LTS",
-  "productionReady": true,
+  "generator": {
+    "tool": "Blender",
+    "version": "4.5.14 LTS",
+    "script": "assets-src/vat/bake.py"
+  },
   "fps": 30,
-  "coordinateSystem": "right-handed Y-up meters, forward +Z",
-  "textureFormat": "RGBA16F little-endian raw; xyz absolute positions in meters, w=1",
-  "sampling": "frame-major linear texels, index=frame*vertexCount+vertexId; nearest texel fetch; adjacent-frame interpolation",
+  "coordinateSystem": {
+    "handedness": "right",
+    "up": "+Y",
+    "forward": "+Z",
+    "units": "metres"
+  },
+  "texture": {
+    "format": "RGBA16F",
+    "encoding": "raw IEEE 754 binary16, little-endian, no header",
+    "width": 1024,
+    "channels": "xyz = absolute object-space position in metres, w = 1; unused tail texels are zero",
+    "packing": "frame-major",
+    "texelIndex": "frame * vertexCount + vertexId",
+    "texelCoord": "(texelIndex % width, floor(texelIndex / width))",
+    "filter": "nearest",
+    "mipmaps": false,
+    "colorSpace": "none",
+    "flipY": false
+  },
+  "geometryFormat": {
+    "encoding": "JSON {vertexCount, positions[x,y,z...], indices[a,b,c...]}",
+    "vertexId": "implicit position order; equals texel vertexId",
+    "winding": "counter-clockwise, outward",
+    "restPose": "positions equal restClip at restFrame within binary16 quantization"
+  },
+  "playback": {
+    "clock": "unscaled sceneT; simulation speed never scales clip time",
+    "interpolation": "linear between adjacent integer frames of nearest-fetched texels",
+    "loop": "frame = (t * fps) mod (frameCount - 1); the endpoint duplicates frame 0",
+    "event": "frame = clamp(t * fps, 0, frameCount - 1) across the whole durationMs including hold phases",
+    "reducedMotion": "hold restClip at restFrame; no clip playback",
+    "rootMotion": "baked into positions; never apply arrival or fall translation again"
+  },
   "variants": {
     "standing": {
       "vertexCount": 1351,
       "triangleCount": 2698,
-      "geometry": "standing.geometry.json",
+      "geometry": {
+        "file": "standing.geometry.json",
+        "bytes": 63118,
+        "sha256": "0be83d3b2cd7611f7154561b06ca442f5b4805c963f56b8878fa88d4b52be222"
+      },
       "topologySHA256": "71123551fda4e7c41fa791115b51a727787e12304824ac1a857a7e6b85651e75",
       "restClip": "stand-sway",
       "restFrame": 0,
@@ -25,18 +62,18 @@
             "width": 1024,
             "height": 398,
             "bytes": 3260416,
-            "sha256": "56f6eee44e6eb618d3133fe1962074511c6ebef73093f8bf8b4918e67b7f7122"
+            "sha256": "3df4fd1361cb2a14927a0dee5c03a74799e7a36065d81fdb6245742bf87332d0"
           },
           "bounds": [
             [
-              -0.36392128467559814,
+              -0.3639,
               0.0,
-              -0.12903659045696259
+              -0.129
             ],
             [
-              0.36414486169815063,
-              1.8381329774856567,
-              0.21824955940246582
+              0.3641,
+              1.8381,
+              0.2182
             ]
           ]
         },
@@ -50,18 +87,18 @@
             "width": 1024,
             "height": 97,
             "bytes": 794624,
-            "sha256": "fb76dffb2ec4718cd6a8c7dd54d18e41fd993e883f1da5c27ca32b3b47752fcf"
+            "sha256": "f402d7c918865a47a46193f9e7e11bf6760bda30895306b8814e60732892dfd9"
           },
           "bounds": [
             [
-              -0.41055381298065186,
-              -0.000365234911441803,
-              -0.28903600573539734
+              -0.4106,
+              -0.0004,
+              -0.289
             ],
             [
-              0.36407142877578735,
-              1.8387680053710938,
-              0.2176598757505417
+              0.3641,
+              1.8388,
+              0.2177
             ]
           ]
         },
@@ -75,18 +112,18 @@
             "width": 1024,
             "height": 97,
             "bytes": 794624,
-            "sha256": "64cd9df2d310f5d78cdae3dba90f4abcf92a44863341b368c3aa32d8b257694b"
+            "sha256": "9f2e06d3743fa37f1326e7bf276be3bff7d837768852e79d98478af23a4e47df"
           },
           "bounds": [
             [
-              -0.36384117603302,
+              -0.3638,
               -4.0,
-              -0.12903600931167603
+              -0.129
             ],
             [
-              0.36407142877578735,
-              1.8381190299987793,
-              0.21744312345981598
+              0.3641,
+              1.8381,
+              0.2174
             ]
           ]
         }
@@ -95,7 +132,11 @@
     "wheelchair": {
       "vertexCount": 2047,
       "triangleCount": 4006,
-      "geometry": "wheelchair.geometry.json",
+      "geometry": {
+        "file": "wheelchair.geometry.json",
+        "bytes": 96302,
+        "sha256": "c9b64925b1f17b713e81de3c0595834d5265f18e6a78f05530594ed280b0ae22"
+      },
       "topologySHA256": "d07f95d6be4aec92895aafc575cead8ca1bbe1a7a1d9036b445641767f1f3692",
       "restClip": "stand-sway",
       "restFrame": 0,
@@ -110,18 +151,18 @@
             "width": 1024,
             "height": 602,
             "bytes": 4931584,
-            "sha256": "b0f7045dc8dee81ac9f1477e70dc2cdda581fa8fe1b3fa9292af6734bda0edfd"
+            "sha256": "261aada42cb9cd27d2207e7da5dae540460c700104e4ecd298883a0e71bbd5b6"
           },
           "bounds": [
             [
-              -0.2917495667934418,
-              -0.012435853481292725,
-              -0.3869999945163727
+              -0.2917,
+              -0.0124,
+              -0.387
             ],
             [
-              0.2918379604816437,
-              1.3819643259048462,
-              0.6420162916183472
+              0.2918,
+              1.382,
+              0.642
             ]
           ]
         },
@@ -135,18 +176,18 @@
             "width": 1024,
             "height": 146,
             "bytes": 1196032,
-            "sha256": "dcbb669aa556c4d6c5b671481d8f184f2eed59c2ba42e16068bc373df4f5a9b0"
+            "sha256": "2fb649866a3c029d1b599a5ee44416349d73b6fcffe364f488654661063bc653"
           },
           "bounds": [
             [
-              -0.2916359305381775,
-              -0.012435853481292725,
-              -0.546999990940094
+              -0.2916,
+              -0.0124,
+              -0.547
             ],
             [
-              0.2917323708534241,
-              1.3819502592086792,
-              0.6420162916183472
+              0.2917,
+              1.382,
+              0.642
             ]
           ]
         },
@@ -160,18 +201,18 @@
             "width": 1024,
             "height": 146,
             "bytes": 1196032,
-            "sha256": "6912dfdabce8f882640e49e9742d0f35daa870b73a9f5d32b3f9859f7c6285a1"
+            "sha256": "387fed411ba066d24b1be72bec8d9c336a56a5acb32491bc8b3c00c40903762f"
           },
           "bounds": [
             [
-              -0.2916359305381775,
-              -4.0124359130859375,
-              -0.3869999945163727
+              -0.2916,
+              -4.0124,
+              -0.387
             ],
             [
-              0.2917323708534241,
-              1.3819502592086792,
-              0.6420162916183472
+              0.2917,
+              1.382,
+              0.642
             ]
           ]
         }
@@ -221,9 +262,8 @@
     0.45
   ],
   "notes": [
-    "Dissolve/extinguish/downlight are renderer opacity/light effects, not mesh deformation.",
-    "Motion already baked into positions; do not add root/fall translation a second time.",
-    "One topology shared by all quality tiers.",
-    "Loops use frameCount - 1; events clamp over the complete 2400ms clip; reduced motion holds each variant restFrame."
+    "Dissolve, extinguish and downlight are renderer opacity/light effects, not mesh deformation.",
+    "One topology per variant is shared by every quality tier.",
+    "The fall bakes a 4 m eased descent; the renderer fades it inside haze before any lower bound."
   ]
 }

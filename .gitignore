@@ -18,5 +18,7 @@ _bmad/render/
 .vercel
 
 dist/
+dist-spike/
+*.blend1
 playwright-report/
 test-results/

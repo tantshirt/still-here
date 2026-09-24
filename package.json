@@ -18,7 +18,9 @@
     "preview": "vite preview",
     "test": "vitest run && npm run test:tools",
     "test:tools": "node --test tools/*.test.mjs && npm run validate:vat",
-    "test:e2e": "npm run build && playwright test"
+    "test:e2e": "npm run build && npm run build:spike && playwright test",
+    "build:spike": "vite build --config tools/render-spike/vite.config.mjs",
+    "bake:vat": "\"${BLENDER:-.bmad-loop/tools/Blender-4.5.14.app/Contents/MacOS/Blender}\" --background --factory-startup --disable-autoexec --python assets-src/vat/bake.py && python3 assets-src/vat/validate.py && node tools/validate-vat.mjs"
   },
   "dependencies": {
     "postprocessing": "6.39.5",

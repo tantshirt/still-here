@@ -8,10 +8,14 @@ const sourceMetadata = { regex: '(^|/)content/sources\\.json([?#].*)?$', message
 const otherLayers = layer => ({ regex: `(^|/)(?:${['render', 'audio', 'ui'].filter(value => value !== layer).join('|')})(?:/|$)`, message: 'Views must not import each other; main owns their wiring (AD-21).' });
 
 export default tseslint.config(
-  { ignores: ['dist/**', 'node_modules/**', 'art/**', '_bmad*/**', '.*/*', 'playwright-report/**', 'test-results/**'] },
+  { ignores: ['dist/**', 'dist-spike/**', 'node_modules/**', 'art/**', '_bmad*/**', '.*/*', 'playwright-report/**', 'test-results/**'] },
   js.configs.recommended,
   tseslint.configs.recommended,
-  { files: ['**/*.mjs'], languageOptions: { globals: { console: 'readonly', process: 'readonly' } } },
+  { files: ['**/*.mjs'], languageOptions: { globals: { console: 'readonly', process: 'readonly', structuredClone: 'readonly', TextEncoder: 'readonly' } } },
+  {
+    files: ['tools/render-spike/**/*.js'],
+    languageOptions: { globals: Object.fromEntries(['window', 'document', 'location', 'navigator', 'performance', 'fetch', 'crypto', 'URLSearchParams', 'TextDecoder', 'WebGL2RenderingContext', 'requestAnimationFrame', 'addEventListener', 'innerWidth', 'innerHeight', 'devicePixelRatio'].map(name => [name, 'readonly'])) },
+  },
   {
     files: ['src/**/*.{ts,js}'], ignores: tests, plugins: { architecture },
     rules: { 'no-restricted-imports': ['error', { patterns: [sourceMetadata] }], 'architecture/import-boundaries': 'error' },

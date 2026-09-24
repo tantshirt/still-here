@@ -24,7 +24,7 @@
       "durationMs": 10000,
       "boundsFinite": true,
       "indicesValid": true,
-      "restGeometryMaxQuantizationMeters": 0.0004907230151754823,
+      "restGeometryMaxQuantizationMeters": 0.0004876704089337478,
       "maxIdleDisplacementMeters": 0.0016914558667664816,
       "loopSeamMeters": 0
     },
@@ -40,7 +40,7 @@
       "durationMs": 2400,
       "boundsFinite": true,
       "indicesValid": true,
-      "arrivalTravelMeters": 0.15997314453125,
+      "arrivalTravelMeters": 0.160003662109375,
       "stationaryLightAndSettle": true
     },
     {
@@ -70,8 +70,8 @@
       "durationMs": 10000,
       "boundsFinite": true,
       "indicesValid": true,
-      "restGeometryMaxQuantizationMeters": 0.0004848109074716836,
-      "maxIdleDisplacementMeters": 0.0013147375017418222,
+      "restGeometryMaxQuantizationMeters": 0.00048616766431112246,
+      "maxIdleDisplacementMeters": 0.001708984375,
       "loopSeamMeters": 0
     },
     {
@@ -86,7 +86,7 @@
       "durationMs": 2400,
       "boundsFinite": true,
       "indicesValid": true,
-      "arrivalTravelMeters": 0.159912109375,
+      "arrivalTravelMeters": 0.16015625,
       "stationaryLightAndSettle": true
     },
     {
@@ -106,8 +106,7 @@
     }
   ],
   "limitations": [
-    "No GPU sampling/performance check",
-    "No mobile/physical-device check",
-    "No final figure quality acceptance"
+    "CPU decode only; GPU sampling is verified by the browser render spike",
+    "No physical-device performance check"
   ]
 }

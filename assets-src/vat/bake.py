@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """STILL HERE production VAT bake. Blender 4.5.14 LTS.
-Run: Blender --background --factory-startup --disable-autoexec --python THIS_FILE
-Inputs immutable CC0 archives from pistachio / Quaternius (see provenance.json).
-Writes the tracked runtime contract in public/vat.
+Run from anywhere (paths resolve from this file):
+  Blender --background --factory-startup --disable-autoexec --python assets-src/vat/bake.py
+Inputs: immutable CC0 sources under assets-src/vat/sources (see provenance.json).
+Writes the tracked runtime contract in public/vat (manifest, geometry, six RGBA16F
+textures), bake validation in assets-src/vat/bake-validation.json, the editable
+source .blend and geometry previews in assets-src/vat/previews (never shipped).
 """
 import bpy, bmesh, json, math, hashlib, struct
 from pathlib import Path
 from mathutils import Vector, Quaternion, Matrix
-ROOT=Path.cwd(); OUT=ROOT/'public/vat'; OUT.mkdir(parents=True,exist_ok=True)
+ROOT=Path(__file__).resolve().parents[2] if '__file__' in globals() else Path.cwd()
+OUT=ROOT/'public/vat'; OUT.mkdir(parents=True,exist_ok=True)
+PREVIEWS=ROOT/'assets-src/vat/previews'; PREVIEWS.mkdir(parents=True,exist_ok=True)
+assert bpy.app.version[:2]==(4,5) and bpy.app.version_string.startswith('4.5.14'),'Blender 4.5.14 LTS required, got '+bpy.app.version_string
 STOCK=ROOT/'assets-src/vat/sources/animated-human-2017.blend'
 BASE=ROOT/'assets-src/vat/sources/human-basemeshes.blend'
 FPS=30
@@ -193,10 +199,20 @@ scene=bpy.context.scene;scene.render.fps=FPS;deps=bpy.context.evaluated_depsgrap
 def snapshot(obj):
  deps.update();ev=obj.evaluated_get(deps);m=ev.to_mesh();m.calc_loop_triangles();verts=[obj.matrix_world@v.co for v in m.vertices];tris=[tuple(t.vertices) for t in m.loop_triangles];ev.to_mesh_clear();return verts,tris
 
-def yup(v):return (v.x,v.z,-v.y)
+def yup(v):
+ # Blender Z-up to runtime Y-up, quantized to 0.1 mm. Blender's threaded modifier
+ # evaluation jitters positions by ~1e-7 m between runs; quantizing first makes the
+ # geometry JSON and half-float textures byte-reproducible (well below binary16 step).
+ return tuple(round(c,4)+0.0 for c in (v.x,v.z,-v.y))
 
 # Geometry must match texture vertices exactly; geometry JSON is a draft transport only.
-manifest={'schema':'still-here-vat/1','blenderVersion':'4.5.14 LTS','productionReady':True,'fps':FPS,'coordinateSystem':'right-handed Y-up meters, forward +Z','textureFormat':'RGBA16F little-endian raw; xyz absolute positions in meters, w=1','sampling':'frame-major linear texels, index=frame*vertexCount+vertexId; nearest texel fetch; adjacent-frame interpolation','variants':{},'eventPhasesMs':{'arrival':[{'name':'light','start':0,'end':600},{'name':'step','start':600,'end':1400},{'name':'settle','start':1400,'end':2400}],'departure':[{'name':'extinguish','start':0,'end':200},{'name':'fall','start':200,'end':1800},{'name':'dissolve','start':1800,'end':2400}]},'fallEase':[.55,0,1,.45],'notes':['Dissolve/extinguish/downlight are renderer opacity/light effects, not mesh deformation.','Motion already baked into positions; do not add root/fall translation a second time.','One topology shared by all quality tiers.','Loops use frameCount - 1; events clamp over the complete 2400ms clip; reduced motion holds each variant restFrame.']}
+manifest={'schema':'still-here-vat/1','generator':{'tool':'Blender','version':'4.5.14 LTS','script':'assets-src/vat/bake.py'},'fps':FPS,
+ 'coordinateSystem':{'handedness':'right','up':'+Y','forward':'+Z','units':'metres'},
+ 'texture':{'format':'RGBA16F','encoding':'raw IEEE 754 binary16, little-endian, no header','width':1024,'channels':'xyz = absolute object-space position in metres, w = 1; unused tail texels are zero','packing':'frame-major','texelIndex':'frame * vertexCount + vertexId','texelCoord':'(texelIndex % width, floor(texelIndex / width))','filter':'nearest','mipmaps':False,'colorSpace':'none','flipY':False},
+ 'geometryFormat':{'encoding':'JSON {vertexCount, positions[x,y,z...], indices[a,b,c...]}','vertexId':'implicit position order; equals texel vertexId','winding':'counter-clockwise, outward','restPose':'positions equal restClip at restFrame within binary16 quantization'},
+ 'playback':{'clock':'unscaled sceneT; simulation speed never scales clip time','interpolation':'linear between adjacent integer frames of nearest-fetched texels','loop':'frame = (t * fps) mod (frameCount - 1); the endpoint duplicates frame 0','event':'frame = clamp(t * fps, 0, frameCount - 1) across the whole durationMs including hold phases','reducedMotion':'hold restClip at restFrame; no clip playback','rootMotion':'baked into positions; never apply arrival or fall translation again'},
+ 'variants':{},'eventPhasesMs':{'arrival':[{'name':'light','start':0,'end':600},{'name':'step','start':600,'end':1400},{'name':'settle','start':1400,'end':2400}],'departure':[{'name':'extinguish','start':0,'end':200},{'name':'fall','start':200,'end':1800},{'name':'dissolve','start':1800,'end':2400}]},'fallEase':[.55,0,1,.45],
+ 'notes':['Dissolve, extinguish and downlight are renderer opacity/light effects, not mesh deformation.','One topology per variant is shared by every quality tier.','The fall bakes a 4 m eased descent; the renderer fades it inside haze before any lower bound.']}
 all_validation=[];rest_positions={};pose_previews={}
 for variant in ['standing','wheelchair']:
  seated=variant=='wheelchair';rest_root=set_pose(0,'stand-sway',seated);bpy.context.view_layer.update();v0,tri0=snapshot(body)
@@ -206,8 +222,8 @@ for variant in ['standing','wheelchair']:
  total_tris=tri0+[tuple(i+len(v0) for i in t) for t in ct];count=len(v0)+len(cv)
  topology=hashlib.sha256(json.dumps(total_tris,separators=(',',':')).encode()).hexdigest()
  geometry={'vertexCount':count,'indices':[i for t in total_tris for i in t],'positions':[a for v in [p+rest_root for p in v0]+cv for a in yup(v-Vector((0,0,floor)))]}
- (OUT/f'{variant}.geometry.json').write_text(json.dumps(geometry,separators=(',',':')))
- rec={'vertexCount':count,'triangleCount':len(total_tris),'geometry':f'{variant}.geometry.json','topologySHA256':topology,'restClip':'stand-sway','restFrame':0,'clips':{}}
+ geometry_bytes=json.dumps(geometry,separators=(',',':')).encode();(OUT/f'{variant}.geometry.json').write_bytes(geometry_bytes)
+ rec={'vertexCount':count,'triangleCount':len(total_tris),'geometry':{'file':f'{variant}.geometry.json','bytes':len(geometry_bytes),'sha256':hashlib.sha256(geometry_bytes).hexdigest()},'topologySHA256':topology,'restClip':'stand-sway','restFrame':0,'clips':{}}
  rest_positions[variant]=geometry['positions']
  for clip,duration in [('stand-sway',10),('arrive' if seated else 'arrive-step',2.4),('fall',2.4)]:
   frames=round(duration*FPS)+1;packed=[];bounds=[[float('inf')]*3,[float('-inf')]*3];first=None;last=None
@@ -244,7 +260,7 @@ for variant in ['standing','wheelchair']:
   all_validation.append({'variant':variant,'clip':clip,'stableTopology':True,'finite':True,'loopSeamMaxMeters':loop_error,'textureBytes':len(raw)})
   rig.animation_data.action=None;rig.location=(0,0,0)
  manifest['variants'][variant]=rec
-(OUT/'manifest.json').write_text(json.dumps(manifest,indent=2));(OUT/'validation.json').write_text(json.dumps(all_validation,indent=2))
+(OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');(ROOT/'assets-src/vat/bake-validation.json').write_text(json.dumps(all_validation,indent=2)+'\n')
 # Save explicit neutral source geometry for both variants, plus editable rig/actions.
 for variant in ['standing','wheelchair']:
  g=json.loads((OUT/f'{variant}.geometry.json').read_text());positions=g['positions'];indices=g['indices'];m=bpy.data.meshes.new(variant+'-rest-baked');m.from_pydata([(positions[i],-positions[i+2],positions[i+1]) for i in range(0,len(positions),3)],[],[indices[i:i+3] for i in range(0,len(indices),3)]);o=bpy.data.objects.new(variant+'-rest-baked',m);scene.collection.objects.link(o);o.hide_render=True;o.hide_viewport=True
@@ -267,6 +283,6 @@ for variant in ['standing','wheelchair']:
    center=Vector((0,0,.95 if variant=='standing' else .72));camdata.ortho_scale=2.10 if variant=='standing' else 1.75
    cam.location=center+Vector((0,-4,.03) if camera_name.startswith('front') else (2,-4,-2.5));cam.rotation_euler=(center-cam.location).to_track_quat('-Z','Y').to_euler()
    lo.location=center+Vector((-2,-3,3));lo.rotation_euler=(center-lo.location).to_track_quat('-Z','Y').to_euler()
-   scene.render.filepath=str(OUT/f'{variant}-{label}-{camera_name}.png');bpy.ops.render.render(write_still=True)
+   scene.render.filepath=str(PREVIEWS/f'{variant}-{label}-{camera_name}.png');bpy.ops.render.render(write_still=True)
   bpy.data.objects.remove(obj,do_unlink=True)
 print('VAT_BAKE_SUCCESS',json.dumps({'variants':{k:{'vertices':v['vertexCount'],'triangles':v['triangleCount']} for k,v in manifest['variants'].items()},'totalTextureBytes':sum(r['textureBytes'] for r in all_validation)}))
