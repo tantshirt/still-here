@@ -2,13 +2,14 @@ import type { SessionSeed } from './rng';
 import { buildStandingLayout } from './layout';
 import { standingCount } from './population';
 import { createScheduler, mergeStandingHidden } from './scheduler';
+import { createAttention } from './attention';
 import type {
   FrameStats,
   Presentation,
+  ReflectionAttention,
   ReflectionReleaseReason,
   SelectionRates,
   Show,
-  SimAppEvent,
   SimPort,
   SimSnapshot,
   SimStep,
@@ -19,6 +20,8 @@ export * from './population';
 export * from './layout';
 export * from './clock';
 export * from './scheduler';
+export * from './attention';
+export * from './reflections';
 
 function freezeSnapshot(snapshot: SimSnapshot): SimSnapshot {
   return Object.freeze({
@@ -26,6 +29,7 @@ function freezeSnapshot(snapshot: SimSnapshot): SimSnapshot {
     standing: Object.freeze({ count: snapshot.standing.count, slots: Object.freeze(snapshot.standing.slots) }),
     actors: Object.freeze(snapshot.actors),
     started: Object.freeze(snapshot.started),
+    reflection: Object.freeze({ ...snapshot.reflection }),
   });
 }
 
@@ -38,6 +42,10 @@ export function createSimulation(session: SessionSeed): SimPort & { readonly ses
   let show: Show = 'both';
   let slots: SimSnapshot['standing']['slots'] = [];
   let scheduler = createScheduler(session, rmax);
+  const attention = createAttention(session);
+  let attentionPaused = true;
+  let captionEligible = false;
+  let catalogIds: readonly string[] = [];
 
   function ensureScheduler(nextRmax: number): void {
     if (nextRmax !== rmax) scheduler = createScheduler(session, nextRmax);
@@ -58,6 +66,7 @@ export function createSimulation(session: SessionSeed): SimPort & { readonly ses
     started: SimSnapshot['started'],
     hidden: readonly number[],
     clocks: { sceneT: number; scheduleT: number },
+    reflection: ReflectionAttention,
   ): SimSnapshot {
     return freezeSnapshot({
       sceneT: clocks.sceneT,
@@ -65,6 +74,17 @@ export function createSimulation(session: SessionSeed): SimPort & { readonly ses
       standing: { count: slots.length, slots: mergeStandingHidden(slots, hidden) },
       actors,
       started,
+      reflection,
+    });
+  }
+
+  function reflectionAttention(): ReflectionAttention {
+    const slot = attention.snapshot();
+    return Object.freeze({
+      phase: slot.phase,
+      actorId: slot.actorId,
+      standingIndex: slot.standingIndex,
+      reflectionId: slot.reflectionId,
     });
   }
 
@@ -73,9 +93,22 @@ export function createSimulation(session: SessionSeed): SimPort & { readonly ses
     step(dt: number, frameStats: FrameStats): SimStep {
       const active = frameStats.active !== false;
       const result = scheduler.step(dt, active, slots);
+      const departuresVisible = show === 'both' || show === 'departures';
+      const simEvents = attention.step({
+        dt: active ? dt : 0,
+        active,
+        attentionPaused,
+        captionEligible,
+        departuresVisible,
+        deathsPerSecond: rates.deathsPerSecond,
+        catalogIds,
+        sceneT: result.clocks.sceneT,
+        started: result.started as import('./types').Actor[],
+        actors: result.actors,
+      });
       return {
-        snapshot: buildSnapshot(result.actors, result.started, result.hidden, result.clocks),
-        events: [] as readonly SimAppEvent[],
+        snapshot: buildSnapshot(result.actors, result.started, result.hidden, result.clocks, reflectionAttention()),
+        events: simEvents,
       };
     },
     applySelection(nextRates: SelectionRates, nextPopulation: number, nextPmax: number, nextRmax: number): void {
@@ -86,6 +119,7 @@ export function createSimulation(session: SessionSeed): SimPort & { readonly ses
       rmax = nextRmax;
       repopulate();
       scheduler.applySelection(rates, slots);
+      attention.resetTiming();
     },
     retry(): void {
       scheduler.retry(slots);
@@ -105,7 +139,19 @@ export function createSimulation(session: SessionSeed): SimPort & { readonly ses
     setSpeed(next: 0.25 | 1 | 4): void {
       scheduler.setSpeed(next);
     },
-    setAttentionPaused(_paused: boolean): void { void _paused; },
-    releaseReflection(_reason: ReflectionReleaseReason): void { void _reason; },
+    setAttentionPaused(paused: boolean): void {
+      attentionPaused = paused;
+    },
+    setCaptionEligible(eligible: boolean): void {
+      captionEligible = eligible;
+    },
+    setReflectionCatalog(ids: readonly string[]): void {
+      catalogIds = ids;
+    },
+    releaseReflection(reason: ReflectionReleaseReason): void {
+      void reason;
+      const clocks = scheduler.snapshot().clocks;
+      attention.release(clocks.sceneT);
+    },
   };
 }

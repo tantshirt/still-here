@@ -1,5 +1,9 @@
 import type { DataConstants, DataManifest, PlaceMetadata, PlaceSeries } from './types';
 export type * from './types';
+export { createPlaceSearch } from './places-search';
+export type { PlaceSearch } from './places-search';
+export { loadReflections, resetReflectionLoaderForTests } from './reflections';
+export type { ReflectionRecord } from './reflections';
 const requests = new Map<string, Promise<unknown>>();
 function object(value: unknown, label: string): Record<string, unknown> {
     if (value === null || typeof value !== 'object' || Array.isArray(value)) {

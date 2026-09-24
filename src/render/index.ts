@@ -15,7 +15,7 @@ import type { SimSnapshot } from '../sim';
 import { wrapLoopSeconds } from './vat-core';
 import { createFigureGeometry, createFigureMaterial, loadVat } from './vat-gpu';
 import { HazePass } from './haze-pass';
-import { applyCameraPreset, type SlabBounds } from './camera-rig';
+import { createCameraRig, type SlabBounds } from './camera-rig';
 import { QualityGovernor, qualityTiers, type QualityTier } from './quality-governor';
 import type { FrameOutput } from './frame-output';
 export * from './frame-output';
@@ -65,6 +65,8 @@ export function createRenderer(options: RenderOptions): RenderPort {
   let lastWidth = 0;
   let lastHeight = 0;
   let smoothedFps = 60;
+  let cameraRig = createCameraRig('under');
+  let appliedCamera: AppSelectors['camera'] = 'under';
   const governor = new QualityGovernor();
   const dummy = new THREE.Object3D();
 
@@ -174,12 +176,16 @@ export function createRenderer(options: RenderOptions): RenderPort {
     scene.add(downlights);
     const clipAttrStanding = new Float32Array(GPU_CAP);
     const phaseAttrStanding = new Float32Array(GPU_CAP);
+    const boostAttrStanding = new Float32Array(GPU_CAP);
     standingGeometry.setAttribute('actorClip', new THREE.InstancedBufferAttribute(clipAttrStanding, 1));
     standingGeometry.setAttribute('actorPhase', new THREE.InstancedBufferAttribute(phaseAttrStanding, 1));
+    standingGeometry.setAttribute('actorBoost', new THREE.InstancedBufferAttribute(boostAttrStanding, 1));
     const clipAttrWheel = new Float32Array(GPU_CAP);
     const phaseAttrWheel = new Float32Array(GPU_CAP);
+    const boostAttrWheel = new Float32Array(GPU_CAP);
     wheelchairGeometry.setAttribute('actorClip', new THREE.InstancedBufferAttribute(clipAttrWheel, 1));
     wheelchairGeometry.setAttribute('actorPhase', new THREE.InstancedBufferAttribute(phaseAttrWheel, 1));
+    wheelchairGeometry.setAttribute('actorBoost', new THREE.InstancedBufferAttribute(boostAttrWheel, 1));
     const volumeMin = new THREE.Vector3(-longEdge / 2 - 22, -46, -edgeZ - 22);
     const volumeMax = new THREE.Vector3(longEdge / 2 + 22, 26, edgeZ + 22);
     const beams = [
@@ -221,7 +227,7 @@ export function createRenderer(options: RenderOptions): RenderPort {
     resize();
     bloom.mipmapBlurPass.levels = config.bloomLevels;
     haze.configure({ path: config.hazePath, samples: config.hazeSamples });
-    applyCameraPreset(camera, { camera: 'under' }, bounds, lastWidth || window.innerWidth, lastHeight || window.innerHeight);
+    cameraRig.update(camera, bounds, lastWidth || window.innerWidth, lastHeight || window.innerHeight, 0, false);
   }
 
   function resize(): void {
@@ -232,7 +238,28 @@ export function createRenderer(options: RenderOptions): RenderPort {
     lastHeight = height;
     renderer.setSize(width, height, false);
     composer.setSize(width, height);
-    applyCameraPreset(camera, { camera: 'under' }, bounds, width, height);
+    cameraRig.update(camera, bounds, width, height, 0, false);
+  }
+
+  function projectAnchor(
+    standingIndex: number,
+    snapshot: SimSnapshot,
+  ): { x: number; y: number } | null {
+    if (!camera || !bounds) return null;
+    const slot = snapshot.standing.slots[standingIndex];
+    if (!slot) return null;
+    const unitShort = 1 / Number(tokens.render['figure-height-ratio']);
+    const scale = bounds.shortEdge / unitShort;
+    const y = slot.tier ? 0.08 * scale : 0;
+    const world = new THREE.Vector3(slot.x * scale, y + bounds.figureHeight * 0.45, slot.z * scale);
+    if (slabRoot) world.y += slabRoot.position.y;
+    const projected = world.project(camera);
+    const width = lastWidth || window.innerWidth;
+    const height = lastHeight || window.innerHeight;
+    return {
+      x: (projected.x * 0.5 + 0.5) * width,
+      y: (-projected.y * 0.5 + 0.5) * height,
+    };
   }
 
   function updateCrowd(snapshot: SimSnapshot, selectors: AppSelectors): void {
@@ -244,8 +271,12 @@ export function createRenderer(options: RenderOptions): RenderPort {
     let wi = 0;
     const clipAttrStanding = crowd.standing.geometry.getAttribute('actorClip') as THREE.InstancedBufferAttribute;
     const phaseAttrStanding = crowd.standing.geometry.getAttribute('actorPhase') as THREE.InstancedBufferAttribute;
+    const boostAttrStanding = crowd.standing.geometry.getAttribute('actorBoost') as THREE.InstancedBufferAttribute;
     const clipAttrWheel = crowd.wheelchair.geometry.getAttribute('actorClip') as THREE.InstancedBufferAttribute;
     const phaseAttrWheel = crowd.wheelchair.geometry.getAttribute('actorPhase') as THREE.InstancedBufferAttribute;
+    const boostAttrWheel = crowd.wheelchair.geometry.getAttribute('actorBoost') as THREE.InstancedBufferAttribute;
+    const attentionBoost = Number(tokens.render['attention-brightness-max']);
+    const attentionId = selectors.attentionActorId;
     for (const slot of snapshot.standing.slots) {
       if (!slot.occupied || activeStanding.has(slot.index)) continue;
       const mesh = slot.wheelchair ? crowd.wheelchair : crowd.standing;
@@ -259,6 +290,7 @@ export function createRenderer(options: RenderOptions): RenderPort {
       const phaseAttr = slot.wheelchair ? phaseAttrWheel : phaseAttrStanding;
       clipAttr.setX(index, 0);
       phaseAttr.setX(index, slot.swayPhase);
+      (slot.wheelchair ? boostAttrWheel : boostAttrStanding).setX(index, 1);
     }
     const eventBaseStanding = si;
     const eventBaseWheel = wi;
@@ -276,6 +308,8 @@ export function createRenderer(options: RenderOptions): RenderPort {
       const phaseAttr = slot.wheelchair ? phaseAttrWheel : phaseAttrStanding;
       clipAttr.setX(index, actor.kind === 'birth' ? 1 : 2);
       phaseAttr.setX(index, Math.max(0, snapshot.sceneT - actor.tStart));
+      const boost = actor.kind === 'death' && actor.actorId === attentionId ? attentionBoost : 1;
+      (slot.wheelchair ? boostAttrWheel : boostAttrStanding).setX(index, boost);
     }
     const standingEventSlots = snapshot.actors
       .filter(actor => !snapshot.standing.slots[actor.standingIndex]?.wheelchair)
@@ -291,6 +325,8 @@ export function createRenderer(options: RenderOptions): RenderPort {
     phaseAttrStanding.needsUpdate = true;
     clipAttrWheel.needsUpdate = true;
     phaseAttrWheel.needsUpdate = true;
+    boostAttrStanding.needsUpdate = true;
+    boostAttrWheel.needsUpdate = true;
     const loopSeconds = idleClip ? wrapLoopSeconds(snapshot.sceneT, idleClip) : 0;
     for (const mesh of [crowd.standing, crowd.wheelchair]) {
       const uniforms = (mesh.material as THREE.ShaderMaterial).uniforms;
@@ -357,21 +393,31 @@ export function createRenderer(options: RenderOptions): RenderPort {
     async retry() {
       releaseResources();
       governor.reset();
+      cameraRig = createCameraRig('under');
+      appliedCamera = 'under';
       await buildScene();
     },
     draw(snapshot, selectors, dt) {
       if (!prepared || !composer || !renderer) return { teaserAnchor: null, fps: smoothedFps };
       updateCrowd(snapshot, selectors);
+      let teaserAnchor: FrameOutput['teaserAnchor'] = null;
+      if (selectors.showReflectionLine && selectors.reflectionAnchorIndex !== null) {
+        teaserAnchor = projectAnchor(selectors.reflectionAnchorIndex, snapshot);
+      }
       updateSlabMotion(snapshot, selectors);
-      if (selectors.camera && camera && bounds) {
-        applyCameraPreset(camera, selectors, bounds, lastWidth, lastHeight);
+      if (camera && bounds) {
+        if (selectors.camera !== appliedCamera) {
+          cameraRig.requestPreset(selectors.camera, snapshot.sceneT, camera, bounds, selectors.reducedMotion);
+          appliedCamera = selectors.camera;
+        }
+        cameraRig.update(camera, bounds, lastWidth, lastHeight, snapshot.sceneT, selectors.cameraPaused);
       }
       composer.render();
       if (dt > 0) smoothedFps = 1 / dt;
       if (selectors.sceneActive && governor.step(dt, smoothedFps, true)) {
         options.sendAppEvent({ type: 'LOW_PERF' });
       }
-      return { teaserAnchor: null, fps: smoothedFps };
+      return { teaserAnchor, fps: smoothedFps };
     },
     dispose() {
       releaseResources();

@@ -1,0 +1,1008 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "reflections": [
+    {
+      "id": "postponement-01",
+      "theme": "postponement",
+      "tone": "regret",
+      "lifeSketch": "A 58-year-old married apartment caretaker who enjoyed repairing radios.",
+      "activityCues": [
+        "working",
+        "conversation"
+      ],
+      "propCues": [
+        "tools",
+        "bench"
+      ],
+      "teaser": "I kept promising myself a quieter year.",
+      "reflection": "I kept promising myself a quieter year. You would ask me to sit beside you, and I would say, “In a minute.” I wish I had sat down.",
+      "causeOfDeath": "A sudden illness",
+      "sourceRefs": [
+        "S04",
+        "S17"
+      ]
+    },
+    {
+      "id": "postponement-02",
+      "theme": "postponement",
+      "tone": "mixed",
+      "lifeSketch": "A 46-year-old parent and night student living in a small inland town.",
+      "activityCues": [
+        "reading",
+        "working"
+      ],
+      "propCues": [
+        "book",
+        "bag"
+      ],
+      "teaser": "My application was still in the drawer.",
+      "reflection": "My application was still in the drawer. I had good reasons to wait, and some frightened ones. I wish I had told someone which were which, instead of pretending I had stopped wanting to learn.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S11",
+        "S17"
+      ]
+    },
+    {
+      "id": "postponement-03",
+      "theme": "postponement",
+      "tone": "fulfilled",
+      "lifeSketch": "A 72-year-old retired laboratory technician who joined a neighborhood choir at sixty.",
+      "activityCues": [
+        "playing",
+        "listening"
+      ],
+      "propCues": [
+        "instrument"
+      ],
+      "teaser": "I went to the rehearsal on Tuesday.",
+      "reflection": "I went to the rehearsal on Tuesday. My voice shook through every song, and I returned the next week anyway. Those ordinary evenings became a whole part of my life that I nearly never met.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S17",
+        "S21"
+      ]
+    },
+    {
+      "id": "postponement-04",
+      "theme": "postponement",
+      "tone": "regret",
+      "lifeSketch": "A 39-year-old graphic designer living far from an old friend.",
+      "activityCues": [
+        "sitting",
+        "reading"
+      ],
+      "propCues": [
+        "book",
+        "bench"
+      ],
+      "teaser": "I knew her number without looking.",
+      "reflection": "I knew her number without looking. Somehow that made calling feel less urgent, as if knowing where someone was meant we were still close. I kept the number longer than I kept the friendship.",
+      "causeOfDeath": "A brain hemorrhage",
+      "sourceRefs": [
+        "S10",
+        "S17"
+      ]
+    },
+    {
+      "id": "postponement-05",
+      "theme": "postponement",
+      "tone": "mixed",
+      "lifeSketch": "A 64-year-old low-income tenant who tended a shared courtyard and worked irregular shifts.",
+      "activityCues": [
+        "tending",
+        "resting"
+      ],
+      "propCues": [
+        "plant",
+        "bench"
+      ],
+      "teaser": "The trip never became affordable.",
+      "reflection": "The trip never became affordable. I do not blame myself for that. But there were afternoons in the courtyard I spent ashamed of staying, while my neighbors were making room for me at their table.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S09",
+        "S20"
+      ]
+    },
+    {
+      "id": "postponement-06",
+      "theme": "postponement",
+      "tone": "fulfilled",
+      "lifeSketch": "A 51-year-old wheelchair user, translator, and amateur percussionist living with a partner.",
+      "activityCues": [
+        "playing",
+        "conversation"
+      ],
+      "propCues": [
+        "wheelchair",
+        "instrument"
+      ],
+      "teaser": "We stopped waiting for the perfect room.",
+      "reflection": "We stopped waiting for the perfect room. We moved the chairs and invited everyone over. The music was uneven, the neighbors complained once, and I am glad we made a place for it.",
+      "causeOfDeath": "Complications following a stroke",
+      "sourceRefs": [
+        "S09",
+        "S21"
+      ]
+    },
+    {
+      "id": "connection-01",
+      "theme": "connection",
+      "tone": "fulfilled",
+      "lifeSketch": "A 79-year-old married woman who ran a small stationery shop with her wife.",
+      "activityCues": [
+        "sharing",
+        "sitting"
+      ],
+      "propCues": [
+        "table",
+        "cup"
+      ],
+      "teaser": "We had supper together for forty years.",
+      "reflection": "We had supper together for forty years. When I think about my life now, I keep hearing her put two plates on the table.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S09",
+        "E05"
+      ]
+    },
+    {
+      "id": "connection-02",
+      "theme": "connection",
+      "tone": "regret",
+      "lifeSketch": "A 61-year-old regional manager and father of an adult son.",
+      "activityCues": [
+        "walking",
+        "conversation"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "I answered every question except the quiet ones.",
+      "reflection": "I answered every question except the quiet ones. My son would stay in the doorway after asking for the car keys. I wish I had noticed that he was sometimes waiting for an invitation to stay.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S05",
+        "S17"
+      ]
+    },
+    {
+      "id": "connection-03",
+      "theme": "connection",
+      "tone": "mixed",
+      "lifeSketch": "A 43-year-old baker sharing a home with two longtime friends.",
+      "activityCues": [
+        "working",
+        "sharing"
+      ],
+      "propCues": [
+        "table",
+        "tools"
+      ],
+      "teaser": "We argued about the dishes until the last week.",
+      "reflection": "We argued about the dishes until the last week. I hope they remember the other things too: the spare keys, the soup, how none of us had to explain a bad day before sitting down.",
+      "causeOfDeath": "Complications of an infection",
+      "sourceRefs": [
+        "S05",
+        "S09"
+      ]
+    },
+    {
+      "id": "connection-04",
+      "theme": "connection",
+      "tone": "fulfilled",
+      "lifeSketch": "An 83-year-old widower who met a neighbor every morning for a walk.",
+      "activityCues": [
+        "walking",
+        "listening"
+      ],
+      "propCues": [
+        "cane"
+      ],
+      "teaser": "He always slowed down at my gate.",
+      "reflection": "He always slowed down at my gate. We talked about very little, which is how we eventually talked about everything. I had not expected another friendship to become so important after seventy.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S03",
+        "S09"
+      ]
+    },
+    {
+      "id": "connection-05",
+      "theme": "connection",
+      "tone": "regret",
+      "lifeSketch": "A 56-year-old ceramics teacher estranged from a former close friend.",
+      "activityCues": [
+        "working",
+        "resting"
+      ],
+      "propCues": [
+        "tools",
+        "bench"
+      ],
+      "teaser": "I wanted her to call first.",
+      "reflection": "I wanted her to call first. Years passed while I rehearsed how gracious I would be when she finally apologized. There were things I needed to say too, and I never made room for them.",
+      "causeOfDeath": "A sudden cardiac arrest",
+      "sourceRefs": [
+        "S08",
+        "S21"
+      ]
+    },
+    {
+      "id": "connection-06",
+      "theme": "connection",
+      "tone": "mixed",
+      "lifeSketch": "A 34-year-old sound technician who moved cities often and regularly visited a younger sister.",
+      "activityCues": [
+        "listening",
+        "conversation"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "My sister knew which train I took.",
+      "reflection": "My sister knew which train I took. I wish I had stayed longer on those visits. Still, we made something of the hours we had, and I do not want my wanting more to erase them.",
+      "causeOfDeath": "A brain hemorrhage",
+      "sourceRefs": [
+        "S09",
+        "E04"
+      ]
+    },
+    {
+      "id": "generosity-01",
+      "theme": "generosity",
+      "tone": "regret",
+      "lifeSketch": "A 67-year-old accountant who kept careful household budgets and loved restoring furniture.",
+      "activityCues": [
+        "working",
+        "sitting"
+      ],
+      "propCues": [
+        "tools",
+        "table"
+      ],
+      "teaser": "I kept waiting until I had more to give.",
+      "reflection": "I kept waiting until I had more to give. There is money left. What hurts is remembering who needed help while I kept moving the amount that would finally make me feel secure.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S01",
+        "S04"
+      ]
+    },
+    {
+      "id": "generosity-02",
+      "theme": "generosity",
+      "tone": "fulfilled",
+      "lifeSketch": "A 45-year-old school receptionist who hosted a weekly shared lunch.",
+      "activityCues": [
+        "sharing",
+        "conversation"
+      ],
+      "propCues": [
+        "table",
+        "cup"
+      ],
+      "teaser": "I always made an extra portion.",
+      "reflection": "I always made an extra portion. Sometimes nobody came, and I ate it the next day. Sometimes a person sat down who had not spoken to anyone all morning, and we had lunch.",
+      "causeOfDeath": "An undiagnosed heart condition",
+      "sourceRefs": [
+        "S05",
+        "S01"
+      ]
+    },
+    {
+      "id": "generosity-03",
+      "theme": "generosity",
+      "tone": "mixed",
+      "lifeSketch": "A 70-year-old retired lawyer and grandparent who volunteered at a reading group.",
+      "activityCues": [
+        "reading",
+        "listening"
+      ],
+      "propCues": [
+        "book",
+        "bench"
+      ],
+      "teaser": "I liked being thanked more than I admitted.",
+      "reflection": "I liked being thanked more than I admitted. Once I began noticing that, I tried listening before offering help. Some people needed things I could not provide, and some needed me to stop deciding for them.",
+      "causeOfDeath": "Complications following surgery",
+      "sourceRefs": [
+        "S15",
+        "S05"
+      ]
+    },
+    {
+      "id": "generosity-04",
+      "theme": "generosity",
+      "tone": "regret",
+      "lifeSketch": "A 48-year-old gardener who shared a home with a cousin.",
+      "activityCues": [
+        "tending",
+        "conversation"
+      ],
+      "propCues": [
+        "plant",
+        "tools"
+      ],
+      "teaser": "I gave advice when he asked for company.",
+      "reflection": "I gave advice when he asked for company. It made me feel useful and let me leave quickly. I wish I had stayed through the awkward silence long enough to hear what he was trying to tell me.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S05",
+        "S03"
+      ]
+    },
+    {
+      "id": "generosity-05",
+      "theme": "generosity",
+      "tone": "fulfilled",
+      "lifeSketch": "A 62-year-old bus dispatcher who ran a small informal tool lending shelf.",
+      "activityCues": [
+        "sharing",
+        "working"
+      ],
+      "propCues": [
+        "tools"
+      ],
+      "teaser": "The drill came back with a different handle.",
+      "reflection": "The drill came back with a different handle. I laughed because it worked better. I liked seeing what people could make with something I owned, and eventually I stopped thinking of it as only mine.",
+      "causeOfDeath": "A stroke",
+      "sourceRefs": [
+        "S01",
+        "S19"
+      ]
+    },
+    {
+      "id": "generosity-06",
+      "theme": "generosity",
+      "tone": "mixed",
+      "lifeSketch": "A 37-year-old university librarian learning to set boundaries with an extended family.",
+      "activityCues": [
+        "reading",
+        "resting"
+      ],
+      "propCues": [
+        "book",
+        "cup"
+      ],
+      "teaser": "I finally learned to leave some evenings empty.",
+      "reflection": "I finally learned to leave some evenings empty. Saying yes to everyone had made me resent the people I loved. The help I could offer honestly was smaller, but I was there for it.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S12",
+        "S21"
+      ]
+    },
+    {
+      "id": "purpose-01",
+      "theme": "purpose",
+      "tone": "fulfilled",
+      "lifeSketch": "A 59-year-old community swimming instructor and foster parent.",
+      "activityCues": [
+        "working",
+        "conversation"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "There were mornings when I hated getting up.",
+      "reflection": "There were mornings when I hated getting up. Then someone would be relieved to see me. That mattered more than I knew.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S05",
+        "S06",
+        "E05"
+      ]
+    },
+    {
+      "id": "purpose-02",
+      "theme": "purpose",
+      "tone": "mixed",
+      "lifeSketch": "A 76-year-old retired archivist cataloguing local photographs with younger volunteers.",
+      "activityCues": [
+        "reading",
+        "sharing"
+      ],
+      "propCues": [
+        "book",
+        "table"
+      ],
+      "teaser": "There are still boxes without labels.",
+      "reflection": "There are still boxes without labels. For years I imagined finishing would make me calm. Now I think of the people who learned beside me, and I am less afraid of leaving the last boxes to them.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S07",
+        "S12"
+      ]
+    },
+    {
+      "id": "purpose-03",
+      "theme": "purpose",
+      "tone": "regret",
+      "lifeSketch": "A 54-year-old successful restaurant owner who once enjoyed sketching strangers.",
+      "activityCues": [
+        "working",
+        "sitting"
+      ],
+      "propCues": [
+        "table",
+        "book"
+      ],
+      "teaser": "I turned everything I enjoyed into a target.",
+      "reflection": "I turned everything I enjoyed into a target. Even drawing on a Sunday became something I had to get better at. I miss the person who could fill a page and throw it away without feeling behind.",
+      "causeOfDeath": "A sudden cardiac arrest",
+      "sourceRefs": [
+        "S16",
+        "S20"
+      ]
+    },
+    {
+      "id": "purpose-04",
+      "theme": "purpose",
+      "tone": "fulfilled",
+      "lifeSketch": "A 41-year-old warehouse coordinator in long-term alcohol recovery who maintained friendships outside work.",
+      "activityCues": [
+        "walking",
+        "conversation"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "I became someone my friends could rely on.",
+      "reflection": "I became someone my friends could rely on. It happened through small arrangements: arriving when I said I would, returning a call, telling the truth when I could not manage. I am proud of that life.",
+      "causeOfDeath": "Complications of an infection",
+      "sourceRefs": [
+        "S03",
+        "S06",
+        "S21"
+      ]
+    },
+    {
+      "id": "purpose-05",
+      "theme": "purpose",
+      "tone": "mixed",
+      "lifeSketch": "A 65-year-old musician and parent who changed careers twice.",
+      "activityCues": [
+        "playing",
+        "listening"
+      ],
+      "propCues": [
+        "instrument",
+        "bench"
+      ],
+      "teaser": "I never found one thing to be.",
+      "reflection": "I never found one thing to be. I taught, repaired instruments, raised a child, and started over. Some changes were forced on me. Even so, there were moments in each life when I felt useful and awake.",
+      "causeOfDeath": "A stroke",
+      "sourceRefs": [
+        "S12",
+        "S21",
+        "E04"
+      ]
+    },
+    {
+      "id": "purpose-06",
+      "theme": "purpose",
+      "tone": "regret",
+      "lifeSketch": "A 47-year-old civil engineer who mentored apprentices and hid uncertainty from colleagues.",
+      "activityCues": [
+        "working",
+        "reading"
+      ],
+      "propCues": [
+        "tools",
+        "book"
+      ],
+      "teaser": "I was good at looking certain.",
+      "reflection": "I was good at looking certain. People trusted me, and I began treating every doubt as something shameful. I wish I had asked more questions while there were still people beside me who could answer.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S03",
+        "S21"
+      ]
+    },
+    {
+      "id": "comparison-01",
+      "theme": "comparison",
+      "tone": "regret",
+      "lifeSketch": "A 60-year-old clothing shop owner with a close circle of longtime neighbors.",
+      "activityCues": [
+        "working",
+        "conversation"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "I kept measuring our house against other houses.",
+      "reflection": "I kept measuring our house against other houses. Meanwhile, people I loved were laughing in the kitchen. I was there with them, but part of me was always inspecting a life I did not have.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S02",
+        "S16"
+      ]
+    },
+    {
+      "id": "comparison-02",
+      "theme": "comparison",
+      "tone": "fulfilled",
+      "lifeSketch": "A 73-year-old former executive who loved learning traditional dances with friends.",
+      "activityCues": [
+        "playing",
+        "listening"
+      ],
+      "propCues": [
+        "bench"
+      ],
+      "teaser": "I was the least graceful person in the class.",
+      "reflection": "I was the least graceful person in the class. Nobody needed me to be impressive there. I learned their names, lost the rhythm, tried again, and found a kind of ease I had missed for years.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S16",
+        "S20"
+      ]
+    },
+    {
+      "id": "comparison-03",
+      "theme": "comparison",
+      "tone": "mixed",
+      "lifeSketch": "A 38-year-old freelance illustrator renting a room and rebuilding savings.",
+      "activityCues": [
+        "working",
+        "resting"
+      ],
+      "propCues": [
+        "book",
+        "table"
+      ],
+      "teaser": "I wanted a room of my own.",
+      "reflection": "I wanted a room of my own. That was a reasonable thing to want. I wish I had not turned every photograph of someone else’s home into evidence that I had failed at being alive.",
+      "causeOfDeath": "A brain hemorrhage",
+      "sourceRefs": [
+        "S16",
+        "S02"
+      ]
+    },
+    {
+      "id": "comparison-04",
+      "theme": "comparison",
+      "tone": "regret",
+      "lifeSketch": "A 68-year-old retired teacher with a younger brother.",
+      "activityCues": [
+        "reading",
+        "conversation"
+      ],
+      "propCues": [
+        "book",
+        "cup"
+      ],
+      "teaser": "My brother never knew we were competing.",
+      "reflection": "My brother never knew we were competing. He would tell me good news and I would spend the evening feeling smaller. I lost so many chances to be happy with him over a contest I invented.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S02",
+        "S15"
+      ]
+    },
+    {
+      "id": "comparison-05",
+      "theme": "comparison",
+      "tone": "mixed",
+      "lifeSketch": "A 52-year-old wheelchair user and local history researcher who hosted friends for games.",
+      "activityCues": [
+        "playing",
+        "sharing"
+      ],
+      "propCues": [
+        "wheelchair",
+        "table"
+      ],
+      "teaser": "Our games took most of Sunday.",
+      "reflection": "Our games took most of Sunday. Some weeks I arrived still bitter about an argument or a rejection. I loved being expected there anyway, with my terrible strategies and extra snacks, without having to become cheerful before I could belong.",
+      "causeOfDeath": "A sudden cardiac arrest",
+      "sourceRefs": [
+        "S09",
+        "S20"
+      ]
+    },
+    {
+      "id": "comparison-06",
+      "theme": "comparison",
+      "tone": "mixed",
+      "lifeSketch": "A 44-year-old photographer who lived with a partner and cared for an aging aunt.",
+      "activityCues": [
+        "working",
+        "listening"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "I still wanted people to like my work.",
+      "reflection": "I still wanted people to like my work. I do not think that was wrong. But the afternoon my aunt fell asleep holding my hand mattered to me without anyone else ever seeing it.",
+      "causeOfDeath": "Complications following surgery",
+      "sourceRefs": [
+        "S02",
+        "S09"
+      ]
+    },
+    {
+      "id": "ordinary-joy-01",
+      "theme": "ordinary-joy",
+      "tone": "fulfilled",
+      "lifeSketch": "An 81-year-old former postal worker who cultivated herbs on a balcony.",
+      "activityCues": [
+        "tending",
+        "resting"
+      ],
+      "propCues": [
+        "plant",
+        "cup"
+      ],
+      "teaser": "The mint survived every winter.",
+      "reflection": "The mint survived every winter. I would crush a leaf between my fingers before making tea. There were larger events in my life, of course, but that small familiar smell keeps returning to me now.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S09",
+        "S20"
+      ]
+    },
+    {
+      "id": "ordinary-joy-02",
+      "theme": "ordinary-joy",
+      "tone": "mixed",
+      "lifeSketch": "A 49-year-old cleaner living on a tight income with an adult niece.",
+      "activityCues": [
+        "resting",
+        "listening"
+      ],
+      "propCues": [
+        "cup",
+        "bench"
+      ],
+      "teaser": "We listened to the rain through a leaking roof.",
+      "reflection": "We listened to the rain through a leaking roof. I wanted the landlord to fix it, and I am still angry that he never did. I also remember my niece’s laugh when we ran out of bowls.",
+      "causeOfDeath": "A stroke",
+      "sourceRefs": [
+        "S09",
+        "E04"
+      ]
+    },
+    {
+      "id": "ordinary-joy-03",
+      "theme": "ordinary-joy",
+      "tone": "regret",
+      "lifeSketch": "A 63-year-old amateur runner and parent who often tracked personal achievements.",
+      "activityCues": [
+        "walking",
+        "resting"
+      ],
+      "propCues": [
+        "bag",
+        "bench"
+      ],
+      "teaser": "I hardly remember the routes without a stopwatch.",
+      "reflection": "I hardly remember the routes without a stopwatch. There were trees changing color and friends talking beside me. I wish I had let a few mornings count for nothing except being outside together.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S16",
+        "S20"
+      ]
+    },
+    {
+      "id": "ordinary-joy-04",
+      "theme": "ordinary-joy",
+      "tone": "fulfilled",
+      "lifeSketch": "A 57-year-old seamstress living with a close friend and two cats.",
+      "activityCues": [
+        "working",
+        "conversation"
+      ],
+      "propCues": [
+        "tools",
+        "table"
+      ],
+      "teaser": "We opened the window while we worked.",
+      "reflection": "We opened the window while we worked. The street would send us arguments, music, the bread delivery. It was an ordinary room and an ordinary life, and I liked the way I belonged inside it.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S09",
+        "E05"
+      ]
+    },
+    {
+      "id": "ordinary-joy-05",
+      "theme": "ordinary-joy",
+      "tone": "mixed",
+      "lifeSketch": "A 36-year-old graduate student and parent who enjoyed swimming and neighborhood markets.",
+      "activityCues": [
+        "walking",
+        "sharing"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "My child loved the cracked blue bowl.",
+      "reflection": "My child loved the cracked blue bowl. I kept meaning to replace it. Now I remember how seriously he carried it to breakfast, and how a household can become yours through things nobody would choose from a shop.",
+      "causeOfDeath": "A brain hemorrhage",
+      "sourceRefs": [
+        "S09",
+        "S19"
+      ]
+    },
+    {
+      "id": "ordinary-joy-06",
+      "theme": "ordinary-joy",
+      "tone": "fulfilled",
+      "lifeSketch": "A 74-year-old former freight coordinator who learned to bake with a neighbor.",
+      "activityCues": [
+        "working",
+        "sharing"
+      ],
+      "propCues": [
+        "table",
+        "tools"
+      ],
+      "teaser": "The first loaf was almost inedible.",
+      "reflection": "The first loaf was almost inedible. We ate the middle and made another the following week. I am glad I kept learning things that would never appear on a certificate or earn me anything.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S09",
+        "S20"
+      ]
+    },
+    {
+      "id": "reconciliation-01",
+      "theme": "reconciliation",
+      "tone": "mixed",
+      "lifeSketch": "A 66-year-old divorced parent who rebuilt contact with an adult daughter.",
+      "activityCues": [
+        "conversation",
+        "listening"
+      ],
+      "propCues": [
+        "bench"
+      ],
+      "teaser": "She agreed to meet me for coffee.",
+      "reflection": "She agreed to meet me for coffee. We did not repair twenty years that afternoon. I listened, badly at first, then better. I am grateful for that beginning even though I wanted more than she could give.",
+      "causeOfDeath": "A stroke",
+      "sourceRefs": [
+        "S08",
+        "S21"
+      ]
+    },
+    {
+      "id": "reconciliation-02",
+      "theme": "reconciliation",
+      "tone": "regret",
+      "lifeSketch": "A 53-year-old delivery coordinator and oldest of three siblings.",
+      "activityCues": [
+        "walking",
+        "conversation"
+      ],
+      "propCues": [
+        "bag"
+      ],
+      "teaser": "I could explain every hurtful thing I said.",
+      "reflection": "I could explain every hurtful thing I said. I thought an explanation should make the hurt disappear. I wish I had spent less time defending my reasons and more time hearing what living with them had cost.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S08",
+        "S10"
+      ]
+    },
+    {
+      "id": "reconciliation-03",
+      "theme": "reconciliation",
+      "tone": "fulfilled",
+      "lifeSketch": "A 78-year-old retired cook who renewed a friendship after a long disagreement.",
+      "activityCues": [
+        "sharing",
+        "conversation"
+      ],
+      "propCues": [
+        "table",
+        "cup"
+      ],
+      "teaser": "We started again with a bag of oranges.",
+      "reflection": "We started again with a bag of oranges. Neither of us made a speech. Later we did talk about what happened, and it hurt, but by then we remembered why we had wanted each other in our lives.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S08",
+        "S03"
+      ]
+    },
+    {
+      "id": "reconciliation-04",
+      "theme": "reconciliation",
+      "tone": "mixed",
+      "lifeSketch": "A 42-year-old groundskeeper in recovery from alcohol dependence who stayed close to a sponsor and sibling.",
+      "activityCues": [
+        "tending",
+        "listening"
+      ],
+      "propCues": [
+        "tools",
+        "plant"
+      ],
+      "teaser": "Some people never answered my letters.",
+      "reflection": "Some people never answered my letters. They had their reasons, and recovery did not entitle me to a reply. I kept changing what I could, with help, and learned to live without calling that change a bargain.",
+      "causeOfDeath": "An inherited heart condition",
+      "sourceRefs": [
+        "S08",
+        "S19",
+        "S21"
+      ]
+    },
+    {
+      "id": "reconciliation-05",
+      "theme": "reconciliation",
+      "tone": "regret",
+      "lifeSketch": "A 71-year-old retired publisher whose closest friendship ended over a business disagreement.",
+      "activityCues": [
+        "reading",
+        "resting"
+      ],
+      "propCues": [
+        "book",
+        "bench"
+      ],
+      "teaser": "I told the story until I was blameless.",
+      "reflection": "I told the story until I was blameless. Each time I left out another detail that made me uncomfortable. By the end, I had almost forgotten the apology I owed, though I had never stopped missing him.",
+      "causeOfDeath": "A brain hemorrhage",
+      "sourceRefs": [
+        "S08",
+        "S03"
+      ]
+    },
+    {
+      "id": "reconciliation-06",
+      "theme": "reconciliation",
+      "tone": "fulfilled",
+      "lifeSketch": "A 55-year-old counselor who kept firm distance from a harmful former partner and built a new household.",
+      "activityCues": [
+        "conversation",
+        "sharing"
+      ],
+      "propCues": [
+        "table",
+        "cup"
+      ],
+      "teaser": "I stopped waiting for the apology to arrive.",
+      "reflection": "I stopped waiting for the apology to arrive. I kept the distance I needed and made a home with other people. Peace came slowly, and it did not require pretending that what happened had been all right.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S19",
+        "S21",
+        "E04"
+      ]
+    },
+    {
+      "id": "acceptance-01",
+      "theme": "acceptance",
+      "tone": "mixed",
+      "lifeSketch": "A 69-year-old retired boat builder living with a spouse and close to several grandchildren.",
+      "activityCues": [
+        "working",
+        "resting"
+      ],
+      "propCues": [
+        "tools",
+        "bench"
+      ],
+      "teaser": "I was happy.",
+      "reflection": "I was happy. I still wanted more time. There are people I hadn’t finished loving, and small plans I was looking forward to keeping with them.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S09",
+        "E04"
+      ]
+    },
+    {
+      "id": "acceptance-02",
+      "theme": "acceptance",
+      "tone": "fulfilled",
+      "lifeSketch": "An 86-year-old retired mathematics teacher who lived alone and welcomed regular visits from friends.",
+      "activityCues": [
+        "reading",
+        "conversation"
+      ],
+      "propCues": [
+        "book",
+        "cup"
+      ],
+      "teaser": "I do not need another grand chapter.",
+      "reflection": "I do not need another grand chapter. I have loved people, made mistakes, learned their names again after losing touch. I would enjoy another morning, but I can look at the mornings I had without turning away.",
+      "causeOfDeath": "Complications of pneumonia",
+      "sourceRefs": [
+        "S06",
+        "S20",
+        "E04"
+      ]
+    },
+    {
+      "id": "acceptance-03",
+      "theme": "acceptance",
+      "tone": "mixed",
+      "lifeSketch": "A 33-year-old landscape architect living with friends and engaged to a longtime partner.",
+      "activityCues": [
+        "walking",
+        "tending"
+      ],
+      "propCues": [
+        "plant",
+        "bag"
+      ],
+      "teaser": "I am still angry about leaving.",
+      "reflection": "I am still angry about leaving. There are good things I can remember, and people who have been gentle with me. Neither makes this feel fair. I am trying to let gratitude and anger sit together.",
+      "causeOfDeath": "Cancer",
+      "sourceRefs": [
+        "S22",
+        "E04"
+      ]
+    },
+    {
+      "id": "acceptance-04",
+      "theme": "acceptance",
+      "tone": "regret",
+      "lifeSketch": "A 75-year-old former rail administrator who kept journals and cared for a garden.",
+      "activityCues": [
+        "reading",
+        "tending"
+      ],
+      "propCues": [
+        "book",
+        "plant"
+      ],
+      "teaser": "There are pages I wish I could rewrite.",
+      "reflection": "There are pages I wish I could rewrite. I cannot make those choices kinder now. I have told the truth about some of them, and I am still learning to stay with what the truth leaves unfinished.",
+      "causeOfDeath": "A stroke",
+      "sourceRefs": [
+        "S10",
+        "S08",
+        "E04"
+      ]
+    },
+    {
+      "id": "acceptance-05",
+      "theme": "acceptance",
+      "tone": "fulfilled",
+      "lifeSketch": "A 64-year-old potter who taught informally and enjoyed long conversations with friends.",
+      "activityCues": [
+        "working",
+        "sharing"
+      ],
+      "propCues": [
+        "tools",
+        "table"
+      ],
+      "teaser": "Someone else can finish the glaze tests.",
+      "reflection": "Someone else can finish the glaze tests. I left the notes where they can find them. I enjoyed the questions more than the answers, and I like imagining the workshop noisy again when I am gone.",
+      "causeOfDeath": "A heart condition",
+      "sourceRefs": [
+        "S07",
+        "S12"
+      ]
+    },
+    {
+      "id": "acceptance-06",
+      "theme": "acceptance",
+      "tone": "mixed",
+      "lifeSketch": "A 58-year-old hospital interpreter who lived with a partner and loved evening walks.",
+      "activityCues": [
+        "walking",
+        "listening"
+      ],
+      "propCues": [
+        "bench"
+      ],
+      "teaser": "I do not know how to say goodbye well.",
+      "reflection": "I do not know how to say goodbye well. Sometimes I ask about the weather because I want an ordinary conversation. If that is what you remember, please know I was glad you were in the room.",
+      "causeOfDeath": "Complications of an infection",
+      "sourceRefs": [
+        "S10",
+        "E04",
+        "E05"
+      ]
+    }
+  ]
+}

@@ -8,7 +8,9 @@ The specified scope already uses Pro. The coordinator authorized using that exis
 
 `SITE_URL` is a build constant, resolved from an explicit build-only `SITE_URL`, then `VERCEL_PROJECT_PRODUCTION_URL` for production (falling back to the stable assigned production domain), or `VERCEL_URL` for previews. Local builds default to the assigned production domain. Invalid origins fail the build. It is exposed through `src/site.ts` and the generated canonical link, with no runtime configuration required.
 
-The global Content-Security-Policy permits only same-origin scripts, styles, fonts, images, connections, media and workers. Frames, forms, objects and manifests are prohibited. Referrers are suppressed; geolocation, camera and microphone are disabled. Filesystem routing overrides every missing response, including missing assets and fonts, to `no-cache`; HTML also uses `no-cache`; hashed assets and licensed self-hosted fonts use immutable one-year caching. Change font filenames when their bytes change.
+The global Content-Security-Policy permits only same-origin scripts, styles, fonts, images, connections, media and workers. Frames, forms, objects and manifests are prohibited. Referrers are suppressed; geolocation, camera and microphone are disabled. Filesystem routing overrides every missing response, including missing assets and fonts, to `no-cache`; HTML also uses `no-cache`; hashed assets, captured stills under `/stills/`, and licensed self-hosted fonts use immutable one-year caching. Change font filenames when their bytes change. Re-capture stills after render changes (`node tools/capture-still.mjs`).
+
+The Vercel build includes the `api/geo` edge handler from `api/geo.ts` (JSON `{ country }`, `Cache-Control: no-store`). Verify it on preview with `curl -I https://YOUR-PREVIEW.vercel.app/api/geo`.
 
 There is no analytics package or endpoint, cookie, localStorage, IndexedDB, manifest, install prompt, spinner or progress bar. The optional session helper accepts only boolean `sh.sound` and `sh.pausedByUser` values, catches storage getter/read/write failures and rejects invalid runtime keys. Later controls stories own preference wiring.
 

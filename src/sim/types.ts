@@ -17,17 +17,25 @@ export interface StandingSlot {
   readonly swayPhase: number;
 }
 export interface Actor extends SimEvent { readonly actorId: number }
+export interface ReflectionAttention {
+  readonly phase: 'idle' | 'reserved' | 'ready';
+  readonly actorId: number | null;
+  readonly standingIndex: number | null;
+  readonly reflectionId: string | null;
+}
+
 export interface SimSnapshot {
   readonly sceneT: number;
   readonly scheduleT: number;
   readonly standing: { readonly count: number; readonly slots: readonly StandingSlot[] };
   readonly actors: readonly Actor[];
   readonly started: readonly SimEvent[];
+  readonly reflection: ReflectionAttention;
 }
 export type SimAppEvent =
   | { readonly type: 'REFLECTION_RESERVED'; readonly reflectionId: string; readonly actorId: number }
   | { readonly type: 'REFLECTION_READY'; readonly reflectionId: string }
-  | { readonly type: 'FIRST_FALL_SEEN' }
+  | { readonly type: 'FIRST_FALL_SEEN'; readonly sceneT: number }
   | { readonly type: 'KEY_CHANGE_FINISHED' };
 export interface FrameStats { readonly fps: number; readonly active?: boolean }
 export interface SimStep { readonly snapshot: SimSnapshot; readonly events: readonly SimAppEvent[] }
@@ -44,5 +52,7 @@ export interface SimPort {
   setShow(show: Show): void;
   setSpeed(speed: 0.25 | 1 | 4): void;
   setAttentionPaused(paused: boolean): void;
+  setCaptionEligible(eligible: boolean): void;
+  setReflectionCatalog(ids: readonly string[]): void;
   releaseReflection(reason: ReflectionReleaseReason): void;
 }

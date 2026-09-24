@@ -7,6 +7,7 @@ export interface SessionSeed {
   nextEventId: number;
   nextActorId: number;
   reflectionBag: string[];
+  lastReflectionId: string | null;
   keyChangeSpent: boolean;
 }
 // Hash each name separately so consuming one stream cannot advance another.
@@ -24,6 +25,6 @@ export function createSession(seed: number): SessionSeed {
   return {
     seed: seed >>> 0,
     streams: Object.fromEntries(streamNames.map(name => [name, createStream(seed, name)])) as Record<StreamName, RandomStream>,
-    nextEventId: 0, nextActorId: 0, reflectionBag: [], keyChangeSpent: false,
+    nextEventId: 0, nextActorId: 0, reflectionBag: [], lastReflectionId: null, keyChangeSpent: false,
   };
 }

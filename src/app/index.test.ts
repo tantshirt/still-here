@@ -8,7 +8,7 @@ function fixture() {
   const audio = createAudio();
   const unlock = vi.spyOn(audio, 'unlock');
   const presentation = vi.spyOn(sim, 'setPresentation');
-  const app = createApp({ session, sim, audio, nowYear: 2026 });
+  const app = createApp({ session, sim, audio, nowYear: 2026, getSceneT: () => 0, captureStill: false });
   app.start();
   return { app, unlock, presentation };
 }

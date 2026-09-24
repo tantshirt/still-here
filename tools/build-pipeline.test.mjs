@@ -26,9 +26,10 @@ for (const failure of [null, ...stages]) {
   });
 }
 
-test('future content stage explicitly declares no-op', () => {
+test('content stage emits hashed reflections', () => {
   const result = spawnSync('npm', ['run', 'build:content'], { encoding: 'utf8' });
-  assert.equal(result.status, 0); assert.match(result.stdout, /build:content.*no-op/);
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /build:content — generated reflections\.[a-f0-9]{16}\.json/);
 });
 
 for (const failure of ['lint', 'tokens', 'stale-token-consumer']) {
@@ -36,7 +37,7 @@ for (const failure of ['lint', 'tokens', 'stale-token-consumer']) {
     const dir = await mkdtemp(join(tmpdir(), 'still-here-real-build-'));
     try {
       await symlink(resolve('node_modules'), join(dir, 'node_modules'), 'dir');
-      for (const file of ['package.json', 'eslint.config.js', 'tools/lint', 'tools/build-tokens.mjs', 'tools/build-stage.mjs', 'tools/build-data.mjs']) {
+      for (const file of ['package.json', 'eslint.config.js', 'tools/lint', 'tools/build-tokens.mjs', 'tools/build-stage.mjs', 'tools/build-data.mjs', 'tools/build-content.mjs', 'content/reflections.json', 'content/sources.json']) {
         await cp(file, join(dir, file), { recursive: true });
       }
       await mkdir(join(dir, 'src'));

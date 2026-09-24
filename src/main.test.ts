@@ -4,13 +4,14 @@ import type { AppContext } from './app';
 import { createAudio } from './audio';
 import { createSession, createSimulation } from './sim';
 import type { SimEvent } from './sim';
+import { STILL_CAPTURE_SEED } from './still-assets';
 import { chooseSeed, runFrame, startFrameLoop } from './main';
 import type { FramePorts } from './main';
 function fixture() {
   const session = createSession(42);
   const sim = createSimulation(session);
   const audio = createAudio();
-  const app = createApp({ session, sim, audio, nowYear: 2026 });
+  const app = createApp({ session, sim, audio, nowYear: 2026, getSceneT: () => 0 });
   app.start();
   return { sim, audio, app };
 }
@@ -22,7 +23,12 @@ it('settles application events before render, edge audio and UI', () => {
   const snapshot = { ...base.sim.step(0, { fps: 60 }).snapshot, started };
   const output = { fps: 60, teaserAnchor: { x: 4, y: 5 } };
   const ports: FramePorts = {
-    sim: { ...base.sim, step: () => { order.push('step'); return { snapshot, events: [{ type: 'FIRST_FALL_SEEN' }] }; } },
+    sim: {
+      ...base.sim,
+      step: () => { order.push('step'); return { snapshot, events: [{ type: 'FIRST_FALL_SEEN', sceneT: 0 }] }; },
+      setAttentionPaused: () => {},
+      setCaptionEligible: () => {},
+    },
     app: { send: () => { order.push('app'); context = { ...context, ready: true, phase: 'ready' }; }, getSnapshot: () => ({ context }) },
     render: { draw: (_received, selectors, dt) => { order.push('render'); expect(selectors.sceneActive).toBe(true); expect(dt).toBeGreaterThan(0); return output; }, dispose() {}, prepare: async () => {}, retry: async () => {} },
     audio: { ...base.audio, update: received => { order.push('audio'); expect(received).toBe(started); } },
@@ -62,6 +68,7 @@ it('preserves Now semantics and bounded boot year', () => {
 });
 it('uses valid capture seeds and cryptographic randomness otherwise', () => {
   const getRandomValues = vi.fn((array: Uint32Array) => { array[0] = 123; return array; }) as unknown as Crypto['getRandomValues'];
+  expect(chooseSeed('?still&seed=999', { getRandomValues })).toBe(STILL_CAPTURE_SEED);
   expect(chooseSeed('?seed=0', { getRandomValues })).toBe(0);
   expect(chooseSeed('?seed=4294967295', { getRandomValues })).toBe(4294967295);
   for (const query of ['', '?seed=-1', '?seed=4294967296', '?seed=NaN']) expect(chooseSeed(query, { getRandomValues })).toBe(123);

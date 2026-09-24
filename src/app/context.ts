@@ -22,14 +22,22 @@ export interface AppContext {
   readonly camera: Camera;
   readonly overlay: 'none' | 'controls' | 'about';
   readonly reflection: Reflection;
+  readonly keyChangeStartedAt: number | null;
+  readonly keyChangePending: boolean;
+  readonly reflectionWordsAnnounced: boolean;
   readonly fallback: FallbackReason | null;
+  readonly audioUnavailable: boolean;
 }
 export type AppEvent = SimAppEvent
-  | { readonly type: 'ENTER' | 'RETRY' | 'SCENE_READY' | 'TOGGLE_PAUSE' | 'TOGGLE_SOUND' | 'RETURN_TO_NOW' | 'DISMISS_REFLECTION' }
+  | { readonly type: 'ENTER' | 'RETRY' | 'SCENE_READY' | 'TOGGLE_PAUSE' | 'TOGGLE_SOUND' | 'RETURN_TO_NOW' }
+  | { readonly type: 'DISMISS_REFLECTION'; readonly sceneT: number }
+  | { readonly type: 'OPEN_REFLECTION' }
+  | { readonly type: 'MARK_REFLECTION_WORDS' }
+  | { readonly type: 'OPEN_CONTROLS' | 'CLOSE_OVERLAY' | 'OPEN_ABOUT' | 'SELECTION_CHANGED' | 'AUDIO_UNAVAILABLE' }
   | { readonly type: 'VISIBILITY'; readonly visible: boolean }
   | { readonly type: 'SELECT_PLACE'; readonly place: string }
   | { readonly type: 'SELECT_YEAR'; readonly year: number }
-  | { readonly type: 'SELECTION_LOADED'; readonly rates: SelectionRates; readonly population: number }
+  | { readonly type: 'SELECTION_LOADED'; readonly rates: SelectionRates; readonly population: number; readonly pmax: number; readonly rmax: number }
   | { readonly type: 'SELECTION_UNAVAILABLE' }
   | { readonly type: 'REDUCED_MOTION_CHANGED'; readonly enabled: boolean }
   | { readonly type: 'VIEWPORT_CLASS'; readonly value: 'compact' | 'wide' }

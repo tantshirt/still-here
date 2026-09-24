@@ -10,7 +10,12 @@ function sceneKeyboardAllowed(target: EventTarget | null): boolean {
 }
 
 /** Native controls keep their key behavior; only otherwise unowned Enter advances. */
-export function createInput(root: HTMLElement, send: (event: AppEvent) => void): InputPort {
+export interface InputOptions {
+  readonly reflectionExpanded?: () => boolean;
+  readonly getSceneT?: () => number;
+}
+
+export function createInput(root: HTMLElement, send: (event: AppEvent) => void, options: InputOptions = {}): InputPort {
   const owner = root.ownerDocument;
   const view = owner.defaultView!;
   const preference = view.matchMedia('(prefers-reduced-motion: reduce)');
@@ -40,6 +45,13 @@ export function createInput(root: HTMLElement, send: (event: AppEvent) => void):
       return;
     }
     if (event.key === 'm' || event.key === 'M') send({ type: 'TOGGLE_SOUND' });
+    if (event.key === 'Escape') {
+      if (options.reflectionExpanded?.() && options.getSceneT) {
+        send({ type: 'DISMISS_REFLECTION', sceneT: options.getSceneT() });
+        return;
+      }
+      send({ type: 'CLOSE_OVERLAY' });
+    }
   };
   preference.addEventListener('change', changed);
   send({ type: 'REDUCED_MOTION_CHANGED', enabled: preference.matches });

@@ -98,6 +98,8 @@ If you leave thinking *I'm still here*, it worked.
 
 ## Status
 
+When the render stack changes, re-run `node tools/capture-still.mjs` and commit the updated WebP files under `public/stills/`.
+
 **In progress.** This repository holds the art direction: the [original brief](docs/brief.md) and the reference stills in [`art/`](art/) that the piece is being built toward. The live, real-time version comes next, and its code will land here.
 
 The stills are references, not the piece. They were made with image generation and art-directed by Dre.

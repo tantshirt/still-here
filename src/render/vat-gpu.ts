@@ -123,16 +123,19 @@ export function createFigureMaterial({ manifest, variantName, clips, color }) {
       in float vertexId;
       in float actorClip;
       in float actorPhase;
+      in float actorBoost;
       uniform sampler2D idleMap, arriveMap, fallMap;
       uniform int vertexCount, idleLastFrame, eventLastFrame, restFrame;
       uniform float idlePeriod, fps, loopSeconds, eventSeconds, dissolveStart, dissolveEnd;
       uniform bool reducedMotion;
       out float vOpacity;
+      out float vBoost;
       ${VAT_GLSL}
       void main() {
         int id = int(vertexId);
         vec3 p;
         vOpacity = 1.0;
+        vBoost = actorBoost;
         if (reducedMotion) {
           p = vatSample(idleMap, float(restFrame), id, vertexCount, idleLastFrame);
         } else if (actorClip < 0.5) {
@@ -155,10 +158,11 @@ export function createFigureMaterial({ manifest, variantName, clips, color }) {
       precision highp float;
       uniform vec3 figureColor;
       in float vOpacity;
+      in float vBoost;
       out vec4 fragColor;
       void main() {
         if (vOpacity < 0.002) discard;
-        fragColor = vec4(figureColor * vOpacity, 1.0);
+        fragColor = vec4(figureColor * vBoost * vOpacity, 1.0);
       }`,
   });
 }

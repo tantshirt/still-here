@@ -17,6 +17,8 @@ node_modules/
 _bmad/render/
 .vercel
 
+content/sources.json
+
 dist/
 dist-spike/
 *.blend1
