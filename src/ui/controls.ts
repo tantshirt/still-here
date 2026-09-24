@@ -212,7 +212,7 @@ export function createSceneChrome(
       for (const place of results) {
         const item = document.createElement('li');
         const button = textAction(place.name);
-        button.className = 'control-field__choice';
+        button.classList.add('control-field__choice');
         const disabled = state.unavailable.some(
           entry => selectionKey({ place: place.id, when: state.selection.when }) === selectionKey(entry),
         );
@@ -246,6 +246,7 @@ export function createSceneChrome(
       label.className = 'control-field__suggestion-label';
       label.textContent = sceneCopy.yourCountry;
       const button = textAction(match.name);
+      button.classList.add('control-field__choice');
       button.addEventListener('click', () => send({ type: 'SELECT_PLACE', place: match.id }));
       yourCountry.append(label, button);
     };

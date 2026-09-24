@@ -24,7 +24,8 @@ function yieldToMain(): Promise<void> {
 }
 
 async function fetchVerified(url, { bytes, sha256 }) {
-  const response = await fetch(url, { cache: 'no-store' });
+  // Default cache mode: the host revalidates by ETag, and the SHA-256 check rejects any stale body.
+  const response = await fetch(url);
   if (!response.ok) throw new VatError(`${url}: HTTP ${response.status}`);
   const buffer = await response.arrayBuffer();
   if (buffer.byteLength !== bytes) throw new VatError(`${url}: byte size ${buffer.byteLength} does not match manifest ${bytes}`);

@@ -157,6 +157,12 @@ function boot(): void {
   async function prepareScene(): Promise<void> {
     try {
       await applyInitialSelection();
+    } catch (error) {
+      console.error('STILL HERE: world data failed to load', error);
+      app.send({ type: 'FALLBACK', reason: 'noWorldData' });
+      return;
+    }
+    try {
       if (stillCapture) {
         while (app.getSnapshot().context.phase === 'opening' || app.getSnapshot().context.phase === 'cut') {
           await new Promise<void>(resolve => requestAnimationFrame(() => resolve()));
@@ -172,9 +178,9 @@ function boot(): void {
       await render.prepare();
       app.send({ type: 'SCENE_READY' });
       if (stillCapture) await markStillCaptureReady();
-    } catch {
-      app.send({ type: 'FALLBACK', reason: 'noWorldData' });
-      if (stillCapture && document.querySelector('.scene-canvas')) await markStillCaptureReady();
+    } catch (error) {
+      console.error('STILL HERE: scene failed to start', error);
+      app.send({ type: 'FALLBACK', reason: 'noWebGL' });
     }
   }
 
@@ -219,7 +225,10 @@ function boot(): void {
     if (lastPhase === 'fallback' && context.phase === 'preparing') {
       void render.retry()
         .then(() => app.send({ type: 'SCENE_READY' }))
-        .catch(() => app.send({ type: 'FALLBACK', reason: 'initTimeout' }));
+        .catch(error => {
+          console.error('STILL HERE: scene retry failed', error);
+          app.send({ type: 'FALLBACK', reason: 'noWebGL' });
+        });
     }
     lastPhase = context.phase;
     ui.present(state);

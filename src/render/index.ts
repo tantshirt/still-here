@@ -35,12 +35,25 @@ export interface RenderPort {
   retry(): Promise<void>;
 }
 
+type Vec3 = [number, number, number];
+
+interface VatClipRecord {
+  durationMs: number;
+  frameCount: number;
+  loop: boolean;
+  bounds: [Vec3, Vec3];
+}
+
+interface LoadedVariant {
+  data: { positions: number[]; indices: number[] };
+  record: { vertexCount: number; clips: Record<string, VatClipRecord> };
+  /** loadVat wraps each clip as { record, texture, halves }; the manifest fields live on `record`. */
+  clips: Record<string, { record: VatClipRecord; texture: THREE.DataTexture }>;
+}
+
 interface LoadedVat {
   manifest: Record<string, unknown>;
-  variants: {
-    standing: { data: { positions: number[]; indices: number[] }; record: { vertexCount: number }; clips: Record<string, unknown> };
-    wheelchair: { data: { positions: number[]; indices: number[] }; record: { vertexCount: number }; clips: Record<string, unknown> };
-  };
+  variants: { standing: LoadedVariant; wheelchair: LoadedVariant };
 }
 
 interface CrowdMeshes {
@@ -96,7 +109,8 @@ export function createRenderer(options: RenderOptions): RenderPort {
     const vat = await loadVat('/vat/', renderer) as unknown as LoadedVat;
     const { manifest } = vat;
     const light = new THREE.Color(tokens.colors['scene-light']);
-    const standSway = vat.variants.standing.clips['stand-sway'] as { bounds: [[number, number, number], [number, number, number]] };
+    const standSway = vat.variants.standing.record.clips['stand-sway'];
+    if (!standSway) throw new Error('VAT manifest is missing standing/stand-sway');
     const figureHeight = standSway.bounds[1][1];
     const [aspectW, aspectH] = tokens.render['slab-aspect'].split('/').map(Number) as [number, number];
     const shortEdge = figureHeight / Number(tokens.render['figure-height-ratio']);
@@ -163,7 +177,7 @@ export function createRenderer(options: RenderOptions): RenderPort {
       mesh.count = 0;
       scene.add(mesh);
     }
-    idleClip = (manifest.variants as LoadedVat['variants']).standing.clips['stand-sway'] as { durationMs: number; frameCount: number; loop: boolean };
+    idleClip = standSway;
     const disc = new THREE.CircleGeometry(0.55, 24);
     disc.rotateX(-Math.PI / 2);
     downlights = new THREE.InstancedMesh(

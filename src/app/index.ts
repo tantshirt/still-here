@@ -291,6 +291,12 @@ function createMachine(input: AppInput) {
         entry: assign({ phase: 'fallback', ready: false }),
         on: {
           RETRY: { target: '#still-here.preparing', actions: ['clearReady', 'retryScene'] },
+          // A slow download can outlast the init timeout; the scene still wins once it is built.
+          SCENE_READY: {
+            target: '#still-here.ready',
+            guard: ({ context }) => context.fallback === 'initTimeout',
+            actions: 'markReady',
+          },
           FALLBACK: { actions: assign({ fallback: ({ event }) => event.reason }) },
         },
       },

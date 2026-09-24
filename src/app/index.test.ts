@@ -58,3 +58,24 @@ it('cancels the cut timer on disposal', () => {
   vi.advanceTimersByTime(400);
   expect(app.getSnapshot().context.phase).toBe('cut');
 });
+it('recovers from an init timeout when the scene finishes building late', () => {
+  vi.useFakeTimers();
+  const { app } = fixture();
+  app.send({ type: 'ENTER' });
+  vi.advanceTimersByTime(400);
+  vi.advanceTimersByTime(10_000);
+  expect(app.getSnapshot().context).toMatchObject({ phase: 'fallback', fallback: 'initTimeout' });
+  app.send({ type: 'SCENE_READY' });
+  expect(app.getSnapshot().context).toMatchObject({ phase: 'ready', ready: true, fallback: null });
+  app.stop();
+});
+it('stays in fallback when a late ready follows a real scene failure', () => {
+  vi.useFakeTimers();
+  const { app } = fixture();
+  app.send({ type: 'ENTER' });
+  vi.advanceTimersByTime(400);
+  app.send({ type: 'FALLBACK', reason: 'noWebGL' });
+  app.send({ type: 'SCENE_READY' });
+  expect(app.getSnapshot().context.phase).toBe('fallback');
+  app.stop();
+});

@@ -4,6 +4,9 @@ const deployed = process.env.PLAYWRIGHT_BASE_URL?.trim() || undefined;
 export const SPIKE_URL = 'http://127.0.0.1:4174';
 export default defineConfig({
   testDir: './tests',
+  // The live scene renders on software GL in headless runs; slow frames under parallel load need headroom.
+  timeout: 60_000,
+  expect: { timeout: 15_000 },
   use: { baseURL: deployed ?? 'http://127.0.0.1:4173' },
   webServer: deployed ? undefined : [
     { command: 'npm run preview -- --port 4173 --strictPort', url: 'http://127.0.0.1:4173', reuseExistingServer: false },

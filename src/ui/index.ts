@@ -51,9 +51,11 @@ export function createUi(root: HTMLElement, options: UiOptions): UiPort & { pres
   let overlay: HTMLElement | undefined;
   let caption: HTMLElement | undefined;
   let status: HTMLElement | undefined;
+  let statusMessage: HTMLParagraphElement | undefined;
+  let statusRetry: HTMLButtonElement | undefined;
   let chrome: ReturnType<typeof createSceneChrome> | undefined;
   let reflection: ReturnType<typeof createReflectionUi> | undefined;
-  let statusAnnounced = false;
+  let statusAnnounced: string | null = null;
   let captionShown = false;
   let lastCaption = '';
   let stillPicture: HTMLPictureElement | undefined;
@@ -95,6 +97,16 @@ export function createUi(root: HTMLElement, options: UiOptions): UiPort & { pres
         status = document.createElement('div');
         status.className = 'scene-status';
         status.hidden = true;
+        statusMessage = document.createElement('p');
+        statusRetry = document.createElement('button');
+        statusRetry.type = 'button';
+        statusRetry.className = 'text-action scene-status__action';
+        statusRetry.textContent = sceneCopy.retry;
+        statusRetry.hidden = true;
+        statusRetry.addEventListener('click', () => {
+          document.dispatchEvent(new CustomEvent('still-here-retry'));
+        });
+        status.append(statusMessage, statusRetry);
         overlay.append(caption, status);
         chrome = createSceneChrome(overlay, options.send, options.getPlaces);
         reflection = createReflectionUi({
@@ -161,29 +173,18 @@ export function createUi(root: HTMLElement, options: UiOptions): UiPort & { pres
         announce(nextCaption);
       }
       lastCaption = nextCaption;
-      if (preparing || fallback) {
+      if ((preparing || fallback) && statusMessage && statusRetry) {
         status.hidden = false;
-        status.replaceChildren();
-        const message = document.createElement('p');
-        message.textContent = preparing ? sceneCopy.preparing : sceneCopy.fallback;
-        status.append(message);
-        if (fallback) {
-          const retry = document.createElement('button');
-          retry.type = 'button';
-          retry.className = 'text-action scene-status__action';
-          retry.textContent = sceneCopy.retry;
-          retry.addEventListener('click', () => {
-            document.dispatchEvent(new CustomEvent('still-here-retry'));
-          });
-          status.append(retry);
-        }
-        if (!statusAnnounced) {
-          statusAnnounced = true;
-          announce(message.textContent ?? '');
+        const message = preparing ? sceneCopy.preparing : sceneCopy.fallback;
+        if (statusMessage.textContent !== message) statusMessage.textContent = message;
+        statusRetry.hidden = !fallback;
+        if (statusAnnounced !== message) {
+          statusAnnounced = message;
+          announce(message);
         }
       } else {
         status.hidden = true;
-        statusAnnounced = false;
+        statusAnnounced = null;
       }
       reflection?.update(state, frame.teaserAnchor, options.getReflections());
       if (maybeAnnounceReflectionWords(state)) {

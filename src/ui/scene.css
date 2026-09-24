@@ -2,6 +2,11 @@
   --vvh: 100vh;
 }
 
+/* Component display rules must never un-hide an element the UI marked hidden. */
+[hidden] {
+  display: none !important;
+}
+
 .scene-surface {
   position: fixed;
   inset: 0;
@@ -106,17 +111,21 @@ html[data-still-capture='true'] .scene-canvas {
 .scene-status {
   position: absolute;
   left: max(var(--spacing-gutter-mobile), env(safe-area-inset-left, 0px));
-  bottom: max(var(--spacing-gutter-mobile), env(safe-area-inset-bottom, 0px));
-  max-width: min(28rem, calc(100% - 2 * var(--spacing-gutter-mobile)));
+  bottom: calc(max(var(--spacing-gutter-mobile), env(safe-area-inset-bottom, 0px)) + var(--spacing-target));
+  max-width: min(var(--components-scene-status-max-width), calc(100% - 2 * var(--spacing-gutter-mobile)));
   padding: var(--spacing-3) var(--spacing-4);
-  background: var(--colors-surface);
-  color: var(--colors-text-primary);
+  background: var(--components-scene-status-background);
+  color: var(--components-scene-status-color);
   font: var(--typography-body-font-weight) var(--typography-body-font-size) / var(--typography-body-line-height) var(--typography-body-font-family);
   pointer-events: auto;
 }
 
+.scene-status p {
+  margin: 0;
+}
+
 .scene-status__action {
-  margin-top: var(--spacing-3);
+  margin-top: var(--spacing-2);
 }
 
 .scene-controls {
@@ -143,10 +152,14 @@ html[data-still-capture='true'] .scene-canvas {
 }
 
 @media (min-width: 768px) {
-  .scene-status,
   .scene-controls {
     left: max(var(--spacing-gutter-desktop), env(safe-area-inset-left, 0px));
     bottom: max(var(--spacing-gutter-desktop), env(safe-area-inset-bottom, 0px));
+  }
+
+  .scene-status {
+    left: max(var(--spacing-gutter-desktop), env(safe-area-inset-left, 0px));
+    bottom: calc(max(var(--spacing-gutter-desktop), env(safe-area-inset-bottom, 0px)) + var(--spacing-target));
   }
 
   .controls-host {
@@ -183,8 +196,16 @@ html[data-still-capture='true'] .scene-canvas {
   font: var(--typography-body-font-weight) var(--typography-body-font-size) / var(--typography-body-line-height) var(--typography-body-font-family);
 }
 
+.controls-panel__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 .controls-panel__body,
 .colophon-panel__body {
+  min-height: 0;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -233,6 +254,11 @@ html[data-still-capture='true'] .scene-canvas {
   width: 100%;
   text-align: left;
   justify-content: flex-start;
+  text-transform: none;
+}
+
+.control-field__choice--selected::before {
+  content: '\2713\00a0';
 }
 
 .control-field__choice--selected,

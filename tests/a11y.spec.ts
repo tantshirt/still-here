@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 test('keyboard path reaches controls and scene semantics stay intact', async ({ page }) => {
+  // `controls` appears only once the live scene is ready, which includes the VAT download and software-GL build.
+  test.setTimeout(90_000);
   await page.goto('/');
   await page.keyboard.press('Enter');
   const scene = page.getByRole('img', { name: 'World, Now' });

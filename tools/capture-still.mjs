@@ -42,6 +42,33 @@ async function waitForPreview() {
   throw new Error('preview server did not become ready');
 }
 
+/* global document, Image -- evaluated inside the browser page */
+/** Mean 0–255 luminance of a screenshot, decoded in a blank page so the app's CSP never applies. */
+async function meanLuminance(browser, buffer) {
+  const probe = await browser.newPage();
+  try {
+    return await probe.evaluate(async base64 => {
+      const image = new Image();
+      image.src = `data:image/png;base64,${base64}`;
+      await image.decode();
+      const canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      const context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      const { data } = context.getImageData(0, 0, canvas.width, canvas.height);
+      let sum = 0;
+      for (let i = 0; i < data.length; i += 4) sum += 0.2126 * data[i] + 0.7152 * data[i + 1] + 0.0722 * data[i + 2];
+      return sum / (data.length / 4);
+    }, buffer.toString('base64'));
+  } finally {
+    await probe.close();
+  }
+}
+
+// A solid-black frame means the scene never drew; never ship that as the fallback still.
+const MIN_MEAN_LUMINANCE = 2;
+
 async function main() {
   await run('npm', ['run', 'build']);
   const preview = spawn('npm', ['run', 'preview', '--', '--port', '4175', '--strictPort'], {
@@ -52,13 +79,19 @@ async function main() {
   try {
     await waitForPreview();
     await mkdir(outDir, { recursive: true });
-    const browser = await chromium.launch();
+    // Software GL keeps captures deterministic on machines without a headless GPU.
+    const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
     const page = await browser.newPage();
     for (const output of STILL_OUTPUTS) {
       await page.setViewportSize({ width: output.width, height: output.height });
       await page.goto(`${previewUrl}/${STILL_QUERY}`);
       await page.waitForSelector('html[data-still-capture-ready="true"]', { timeout: 120_000 });
       await page.locator('.scene-canvas').waitFor({ state: 'attached', timeout: 120_000 });
+      const clip = { x: 0, y: 0, width: output.width, height: output.height };
+      const luminance = await meanLuminance(browser, await page.screenshot({ type: 'png', clip }));
+      if (luminance < MIN_MEAN_LUMINANCE) {
+        throw new Error(`${output.file}: capture is near-black (mean luminance ${luminance.toFixed(2)}); the scene did not render`);
+      }
       await page.screenshot({
         path: join(outDir, output.file),
         type: 'webp',
