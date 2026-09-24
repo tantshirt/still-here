@@ -1,0 +1,91 @@
+.scene-surface {
+  position: fixed;
+  inset: 0;
+  background: var(--colors-background);
+  overflow: hidden;
+}
+
+.scene-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.scene-ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  color: var(--colors-text-secondary);
+}
+
+.scene-caption {
+  position: absolute;
+  top: max(var(--spacing-gutter-mobile), env(safe-area-inset-top, 0px));
+  left: max(var(--spacing-gutter-mobile), env(safe-area-inset-left, 0px));
+  font: var(--typography-metadata-font-weight) var(--typography-metadata-font-size) / var(--typography-metadata-line-height) var(--typography-metadata-font-family);
+  letter-spacing: var(--typography-metadata-letter-spacing);
+  text-transform: var(--typography-metadata-text-transform);
+  color: var(--colors-text-secondary);
+  opacity: 0;
+  transition: opacity var(--motion-ui) var(--motion-ease-out);
+}
+
+.scene-caption--visible {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .scene-caption {
+    top: max(var(--spacing-gutter-desktop), env(safe-area-inset-top, 0px));
+    left: max(var(--spacing-gutter-desktop), env(safe-area-inset-left, 0px));
+  }
+}
+
+.scene-status {
+  position: absolute;
+  left: max(var(--spacing-gutter-mobile), env(safe-area-inset-left, 0px));
+  bottom: max(var(--spacing-gutter-mobile), env(safe-area-inset-bottom, 0px));
+  max-width: min(28rem, calc(100% - 2 * var(--spacing-gutter-mobile)));
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--colors-surface);
+  color: var(--colors-text-primary);
+  font: var(--typography-body-font-weight) var(--typography-body-font-size) / var(--typography-body-line-height) var(--typography-body-font-family);
+  pointer-events: auto;
+}
+
+.scene-status__action {
+  margin-top: var(--spacing-3);
+}
+
+.scene-controls-placeholder {
+  position: absolute;
+  left: max(var(--spacing-gutter-mobile), env(safe-area-inset-left, 0px));
+  bottom: max(var(--spacing-gutter-mobile), env(safe-area-inset-bottom, 0px));
+  font: var(--typography-action-font-weight) var(--typography-action-font-size) / var(--typography-action-line-height) var(--typography-action-font-family);
+  letter-spacing: var(--typography-action-letter-spacing);
+  text-transform: var(--typography-action-text-transform);
+  color: var(--colors-text-quiet);
+  min-width: var(--spacing-target);
+  min-height: var(--spacing-target);
+  pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+  .scene-status,
+  .scene-controls-placeholder {
+    left: max(var(--spacing-gutter-desktop), env(safe-area-inset-left, 0px));
+    bottom: max(var(--spacing-gutter-desktop), env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.sr-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

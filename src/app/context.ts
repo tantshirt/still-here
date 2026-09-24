@@ -5,7 +5,7 @@ export type Camera = 'under' | 'level' | 'above';
 export type FallbackReason = 'noWebGL' | 'lowPerf' | 'contextLost' | 'initTimeout' | 'noWorldData';
 export type Reflection = { readonly kind: 'none' } | { readonly kind: 'teaser' | 'expanded'; readonly id: string };
 export interface AppContext {
-  readonly phase: 'opening' | 'cut' | 'preparing';
+  readonly phase: 'opening' | 'cut' | 'preparing' | 'ready' | 'fallback';
   readonly session: SessionSeed;
   readonly selection: Selection;
   readonly pending: Selection | null;
@@ -37,4 +37,5 @@ export type AppEvent = SimAppEvent
   | { readonly type: 'SELECT_SPEED'; readonly speed: 0.25 | 1 | 4 }
   | { readonly type: 'SELECT_CAMERA'; readonly camera: Camera }
   | { readonly type: 'HALT' }
-  | { readonly type: 'FALLBACK'; readonly reason: FallbackReason };
+  | { readonly type: 'FALLBACK'; readonly reason: FallbackReason }
+  | { readonly type: 'LOW_PERF' };

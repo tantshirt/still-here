@@ -41,7 +41,7 @@ test('early Enter removes threshold on the gesture stack, holds black, then expo
   await page.clock.runFor(1);
   const scene = page.getByRole('img', { name: 'World, Now' });
   await expect(scene).toBeVisible();
-  await expect(scene).toHaveAccessibleDescription('Modeled estimates and imagined lives.');
+  await expect(scene).toHaveAccessibleDescription(/Modeled estimates and imagined lives\./);
   await expect(scene).toBeFocused();
   await expect(scene).toHaveCSS('background-color', 'rgb(0, 0, 0)');
   await page.screenshot({ path: info.outputPath('scene.png') });

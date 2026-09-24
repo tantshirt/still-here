@@ -12,6 +12,9 @@ export interface StandingSlot {
   readonly z: number;
   readonly seed: number;
   readonly occupied: boolean;
+  readonly tier: 0 | 1;
+  readonly wheelchair: boolean;
+  readonly swayPhase: number;
 }
 export interface Actor extends SimEvent { readonly actorId: number }
 export interface SimSnapshot {
@@ -35,7 +38,7 @@ export type ReflectionReleaseReason = 'dismissed' | 'selection' | 'overlay';
 /** Synchronous commands only. Simulation owns scene truth; views never call this port. */
 export interface SimPort {
   step(dt: number, frameStats: FrameStats): SimStep;
-  applySelection(rates: SelectionRates, population: number): void;
+  applySelection(rates: SelectionRates, population: number, pmax: number): void;
   setPresentation(presentation: Presentation): void;
   setShow(show: Show): void;
   setSpeed(speed: 0.25 | 1 | 4): void;

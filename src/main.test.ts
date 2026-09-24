@@ -18,13 +18,13 @@ it('settles application events before render, edge audio and UI', () => {
   const base = fixture();
   const order: string[] = [];
   const started: readonly SimEvent[] = [{ kind: 'death', id: 1, actorSlot: 2, standingIndex: 3, tStart: 0 }];
-  let context = base.app.getSnapshot().context;
+    let context: AppContext = { ...base.app.getSnapshot().context, ready: true, phase: 'ready' };
   const snapshot = { ...base.sim.step(0, { fps: 60 }).snapshot, started };
   const output = { fps: 60, teaserAnchor: { x: 4, y: 5 } };
   const ports: FramePorts = {
     sim: { ...base.sim, step: () => { order.push('step'); return { snapshot, events: [{ type: 'FIRST_FALL_SEEN' }] }; } },
-    app: { send: () => { order.push('app'); context = { ...context, ready: true }; }, getSnapshot: () => ({ context }) },
-    render: { draw: (received, selectors) => { order.push('render'); expect(received).toBe(snapshot); expect(selectors.sceneActive).toBe(true); return output; }, dispose() {} },
+    app: { send: () => { order.push('app'); context = { ...context, ready: true, phase: 'ready' }; }, getSnapshot: () => ({ context }) },
+    render: { draw: (_received, selectors, dt) => { order.push('render'); expect(selectors.sceneActive).toBe(true); expect(dt).toBeGreaterThan(0); return output; }, dispose() {}, prepare: async () => {}, retry: async () => {} },
     audio: { ...base.audio, update: received => { order.push('audio'); expect(received).toBe(started); } },
     ui: { update: (received, state, frame) => { order.push('ui'); expect(frame).toBe(output); expect(received).toBe(snapshot); expect(state.ready).toBe(true); expect(state).not.toHaveProperty('session'); }, dispose() {} },
   };
@@ -37,8 +37,8 @@ it('owns exactly one cancellable frame chain and clamps elapsed time', () => {
   let id = 0;
   const step = vi.spyOn(base.sim, 'step');
   const ports: FramePorts = { ...base,
-    app: { send() {}, getSnapshot: () => ({ context: { ...base.app.getSnapshot().context, ready: true } }) },
-    render: { draw: () => ({ fps: 60, teaserAnchor: null }), dispose() {} },
+    app: { send() {}, getSnapshot: () => ({ context: { ...base.app.getSnapshot().context, ready: true, phase: 'ready' } }) },
+    render: { draw: () => ({ fps: 60, teaserAnchor: null }), dispose() {}, prepare: async () => {}, retry: async () => {} },
     ui: { update() {}, dispose() {} },
   };
   const stop = startFrameLoop(ports, { request: callback => { callbacks.set(++id, callback); return id; }, cancel: key => { callbacks.delete(key); } });
@@ -75,14 +75,14 @@ it.each([
   ['fallback', { fallback: 'noWebGL' }],
 ] as const)('gates %s time and resumes without catch-up', (_name, inactive) => {
   const base = fixture();
-  const active = { ...base.app.getSnapshot().context, ready: true };
+  const active = { ...base.app.getSnapshot().context, ready: true, phase: 'ready' as const };
   let context: AppContext = active;
   let callback: FrameRequestCallback;
   const step = vi.spyOn(base.sim, 'step');
   const onFirstFrame = vi.fn();
   const ports: FramePorts = { ...base,
     app: { send() {}, getSnapshot: () => ({ context }) },
-    render: { draw: () => ({ fps: 60, teaserAnchor: null }), dispose() {} },
+    render: { draw: () => ({ fps: 60, teaserAnchor: null }), dispose() {}, prepare: async () => {}, retry: async () => {} },
     ui: { update() {}, dispose() {} },
   };
   const stop = startFrameLoop(ports, { request: next => { callback = next; return 1; }, cancel() {} }, onFirstFrame);

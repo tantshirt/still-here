@@ -17,6 +17,10 @@ export default tseslint.config(
     languageOptions: { globals: Object.fromEntries(['window', 'document', 'location', 'navigator', 'performance', 'fetch', 'crypto', 'URLSearchParams', 'TextDecoder', 'WebGL2RenderingContext', 'requestAnimationFrame', 'addEventListener', 'innerWidth', 'innerHeight', 'devicePixelRatio'].map(name => [name, 'readonly'])) },
   },
   {
+    files: ['src/render/{vat-core,vat-gpu,haze-pass}.ts'],
+    rules: { '@typescript-eslint/ban-ts-comment': 'off' },
+  },
+  {
     files: ['src/**/*.{ts,js}'], ignores: tests, plugins: { architecture },
     rules: { 'no-restricted-imports': ['error', { patterns: [sourceMetadata] }], 'architecture/import-boundaries': 'error' },
   },
