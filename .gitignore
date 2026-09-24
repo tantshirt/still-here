@@ -1,6 +1,7 @@
 # working tooling and process files stay local
 .design-council/
 .claude/
+.codex/
 .agents/
 _bmad/
 _bmad-output/
@@ -9,3 +10,7 @@ _bmad-output/
 .DS_Store
 .env*
 node_modules/
+.bmad-loop/runs/
+.bmad-loop/cache/
+.bmad-loop/policy.toml
+_bmad/render/
